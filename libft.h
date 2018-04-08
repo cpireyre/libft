@@ -6,7 +6,7 @@
 /*   By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/06 10:30:56 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/04/08 12:22:07 by cpireyre         ###   ########.fr       */
+/*   Updated: 2018/04/08 12:58:24 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 
 # include <string.h>
+
 typedef struct		s_list
 {
 	void			*content;

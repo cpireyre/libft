@@ -6,7 +6,7 @@
 /*   By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/06 10:30:56 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/04/08 11:15:51 by cpireyre         ###   ########.fr       */
+/*   Updated: 2018/04/08 12:01:38 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,9 @@ t_list				*ft_lstnew(void const *content, size_t content_size);
 void				*ft_memcpy(void *dst, const void *src, size_t n);
 int					ft_min(int a, int b);
 int					ft_max(int a, int b);
+void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
+void				ft_memdel(void **ap);
+void				*ft_memset(void *b, int c, size_t len);
+void				*ft_memalloc(size_t size);
 
 #endif

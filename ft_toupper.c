@@ -6,13 +6,13 @@
 /*   By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/05 14:48:19 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/04/06 11:45:55 by cpireyre         ###   ########.fr       */
+/*   Updated: 2018/04/08 07:49:43 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_toupper(char c)
+int		ft_toupper(int c)
 {
 	return (!ft_islower(c) ? c : c - 32);
 }

@@ -6,13 +6,13 @@
 /*   By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/06 11:49:14 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/04/06 11:49:14 by cpireyre         ###   ########.fr       */
+/*   Updated: 2018/04/08 08:21:08 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int				ft_isprint(char c)
+int		ft_isprint(int c)
 {
-	return (!(ft_iswithin(c, 0, 31) || (c == 127)));
+	return (ft_iswithin(c, 32, 126));
 }

@@ -6,13 +6,13 @@
 /*   By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/06 11:49:15 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/04/06 11:49:18 by cpireyre         ###   ########.fr       */
+/*   Updated: 2018/04/08 07:45:07 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned char		ft_iswithin(char c, unsigned char bgn, unsigned char end)
+int		ft_iswithin(int c, int bgn, int end)
 {
 	return (bgn <= c && c <= end);
 }

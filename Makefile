@@ -16,7 +16,7 @@ CC			=	gcc
 CFLAGS		=	-Wall -Wextra -Werror -I.
 BFLAGS		=	-c -o
 
-AR			:=	libtool -static -o
+AR			:=	ar rc
 RL			:= 	ranlib
 RM			:=	rm -f
 
@@ -44,9 +44,12 @@ $(NAME): $(OBJ)
 	$(AR) $@ $^
 	$(RL) $@
 
+FUNC = $(basename $(notdir $@))
+
 $(OBJ_PATH)%.o: $(SRC_PATH)%.c
 	@mkdir $(OBJ_PATH) 2> /dev/null || true
 	$(CC) $(CFLAGS) $(BFLAGS) $@ $<
+	echo `cat $(FUNC).c | grep $(FUNC) | sed -n "2p"`\; >> lol.h
 
 clean: 
 	$(RM) $(OBJ) 

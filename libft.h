@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/09 15:21:16 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/04/09 15:32:23 by cpireyre         ###   ########.fr       */
+/*   Created: 2018/04/09 15:56:30 by cpireyre          #+#    #+#             */
+/*   Updated: 2018/04/09 15:56:32 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,14 +35,14 @@ void					ft_putstr(char *str);
 void					ft_putchar_fd(char c, int fd);
 void					ft_putstr_fd(char const *s, int fd);
 size_t					ft_strlen(const char *s);
-t_bool						ft_isalnum(int c);
-t_bool						ft_isalpha(int c);
-t_bool						ft_isascii(int c);
-t_bool						ft_isdigit(int c);
-t_bool						ft_isprint(int c);
-t_bool						ft_islower(int c);
-t_bool						ft_isupper(int c);
-t_bool						ft_iswithin(int c, int a, int b);
+t_bool					ft_isalnum(int c);
+t_bool					ft_isalpha(int c);
+t_bool					ft_isascii(int c);
+t_bool					ft_isdigit(int c);
+t_bool					ft_isprint(int c);
+t_bool					ft_islower(int c);
+t_bool					ft_isupper(int c);
+t_bool					ft_iswithin(int c, int a, int b);
 int						ft_min(int a, int b);
 int						ft_max(int a, int b);
 int						ft_tolower(int c);
@@ -58,5 +58,6 @@ void					ft_lstdelone(t_list **a, void (*del)(void *, size_t));
 void					ft_lstadd(t_list **alst, t_list *new);
 void					ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list					*ft_lstlast(t_list *node);
+size_t					ft_lstdepth(t_list *node);
 
 #endif

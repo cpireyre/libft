@@ -1,23 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/09 09:49:00 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/04/09 14:22:59 by cpireyre         ###   ########.fr       */
+/*   Created: 2018/04/09 14:03:08 by cpireyre          #+#    #+#             */
+/*   Updated: 2018/04/09 14:17:17 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-void	ft_lstdelone(t_list **a, void (*del)(void *, size_t))
+int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	if (a)
-	{
-		del((*a)->content, (*a)->content_size);
-		ft_memdel((void**)a);
-	}
+	(void)s1;
+	(void)s2;
+	(void)n;
+	return (0);
 }

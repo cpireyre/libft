@@ -6,13 +6,13 @@
 /*   By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/06 11:49:13 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/04/08 07:46:04 by cpireyre         ###   ########.fr       */
+/*   Updated: 2018/04/09 15:31:18 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_islower(int c)
+t_bool		ft_islower(int c)
 {
 	return (ft_iswithin(c, 97, 122));
 }

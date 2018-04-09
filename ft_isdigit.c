@@ -6,13 +6,13 @@
 /*   By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/06 11:49:12 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/04/08 07:47:53 by cpireyre         ###   ########.fr       */
+/*   Updated: 2018/04/09 15:31:13 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isdigit(int c)
+t_bool		ft_isdigit(int c)
 {
 	return (ft_iswithin(c, 48, 57));
 }

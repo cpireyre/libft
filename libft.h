@@ -1,58 +1,62 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   newlibft.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/06 10:30:56 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/04/09 09:31:37 by cpireyre         ###   ########.fr       */
+/*   Created: 2018/04/09 15:21:16 by cpireyre          #+#    #+#             */
+/*   Updated: 2018/04/09 15:32:23 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#ifndef NEWLIBFT_H
+# define NEWLIBFT_H
 
 # include <string.h>
 
-typedef struct		s_list
+typedef struct			s_list
 {
 	void			*content;
 	size_t			content_size;
 	struct s_list	*next;
-}					t_list;
+}						t_list;
 
-typedef enum	e_bool
+typedef enum			e_bool
 {
 	false,
 	true
-}				t_bool;
+}						t_bool;
 
-int					ft_isalnum(int c);
-int					ft_isalpha(int c);
-int					ft_isascii(int c);
-int					ft_isdigit(int c);
-size_t				ft_strlen(const char *str);
-int					ft_isprint(int c);
-int					ft_toupper(int c);
-int					ft_tolower(int c);
-void				ft_putchar(char c);
-void				ft_putstr(char *str);
-int					ft_islower(int c);
-int					ft_isupper(int c);
-int					ft_iswithin(int c, int a, int b);
-void				ft_putchar_fd(char c, int fd);
-void				ft_putstr_fd(char const *s, int fd);
-t_list				*ft_lstnew(void const *content, size_t content_size);
-void				*ft_memcpy(void *dst, const void *src, size_t n);
-int					ft_min(int a, int b);
-int					ft_max(int a, int b);
-void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
-void				ft_memdel(void **ap);
-void				*ft_memset(void *b, int c, size_t len);
-void				ft_bzero(void *s, size_t n);
-void				ft_lstadd(t_list **alst, t_list *new);
-void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
-t_list				*ft_lstlast(t_list *node);
+typedef unsigned char	t_byte;
+
+void					ft_putchar(char c);
+void					ft_putstr(char *str);
+void					ft_putchar_fd(char c, int fd);
+void					ft_putstr_fd(char const *s, int fd);
+size_t					ft_strlen(const char *s);
+t_bool						ft_isalnum(int c);
+t_bool						ft_isalpha(int c);
+t_bool						ft_isascii(int c);
+t_bool						ft_isdigit(int c);
+t_bool						ft_isprint(int c);
+t_bool						ft_islower(int c);
+t_bool						ft_isupper(int c);
+t_bool						ft_iswithin(int c, int a, int b);
+int						ft_min(int a, int b);
+int						ft_max(int a, int b);
+int						ft_tolower(int c);
+int						ft_toupper(int c);
+void					*ft_memcpy(void *dst, const void *src, size_t n);
+void					ft_memdel(void **ap);
+void					*ft_memset(void *b, int c, size_t len);
+void					*ft_memalloc(size_t size);
+void					ft_bzero(void *s, size_t n);
+int						ft_memcmp(const void *s1, const void *s2, size_t n);
+t_list					*ft_lstnew(void const *content, size_t content_size);
+void					ft_lstdelone(t_list **a, void (*del)(void *, size_t));
+void					ft_lstadd(t_list **alst, t_list *new);
+void					ft_lstiter(t_list *lst, void (*f)(t_list *elem));
+t_list					*ft_lstlast(t_list *node);
 
 #endif

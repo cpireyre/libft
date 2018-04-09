@@ -6,7 +6,7 @@
 #    By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/05 11:36:52 by cpireyre          #+#    #+#              #
-#    Updated: 2018/04/09 11:26:25 by cpireyre         ###   ########.fr        #
+#    Updated: 2018/04/09 11:56:21 by cpireyre         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,7 +38,8 @@ OBJ_NAME	=	$(SRC_NAME:.c=.o)
 SRC			=	$(addprefix $(SRC_PATH),$(SRC_NAME))
 OBJ			=	$(addprefix $(OBJ_PATH),$(OBJ_NAME))
 FUNC		=	$(basename $(notdir $@))
-HEADER		=	.prototypes
+HEADER		:=	newlibft.h
+DEFHEADER	:=	$(shell echo $(HEADER) | tr . _ | tr a-z A-Z)
 
 all: $(NAME)
 
@@ -62,13 +63,14 @@ re: fclean all
 
 header:
 	@$(RM) $(HEADER)
-	(vim -c ':execute "normal\OP" | wq' $(HEADER))
+	@vim -c ':execute "normal\OP" | normal 12GJ' -c wq $(HEADER)
+	echo "#ifndef $(DEFHEADER)\n# define $(DEFHEADER)\n" >> $(HEADER)
 	@make clean
 	@make $(OBJ)
-	@make clean
-	@vim -c ':let @i="0w4i	j0"' -c ':let @t="/ft_VGNj:normal @i:noh" | normal @t | wq' \
-	   $(HEADER)
+	@vim -c ':let @i="0w4i	j0"' -c ':let @t="/ ft_VGNj:normal @i:noh" | \
+		normal @t' -c wq $(HEADER)
 	echo "\n#endif" >> $(HEADER)
 	@cat $(HEADER)
+	@make clean
 
-.PHONY: all, clean, fclean, re
+.PHONY: all, clean, fclean, re, header

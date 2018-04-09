@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/09 16:29:22 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/04/09 16:29:24 by cpireyre         ###   ########.fr       */
+/*   Created: 2018/04/09 16:47:32 by cpireyre          #+#    #+#             */
+/*   Updated: 2018/04/09 16:47:34 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,5 +60,6 @@ void					ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list					*ft_lstlast(t_list *node);
 size_t					ft_lstdepth(t_list *node);
 void					ft_lstappend(t_list **node, t_list *addend);
+t_list					*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
 #endif

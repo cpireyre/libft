@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstappend.c                                     :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/09 16:04:14 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/04/09 16:45:34 by cpireyre         ###   ########.fr       */
+/*   Created: 2018/04/09 16:30:21 by cpireyre          #+#    #+#             */
+/*   Updated: 2018/04/09 17:02:53 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"	
 
-void	ft_lstappend(t_list **node, t_list *addend)
+t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	if (addend)
+	t_list *map;
+
+	map = NULL;
+	while (lst)
 	{
-		if (*node)
-		{
-			ft_lstlast(*node)->next = addend;
-			addend->next = NULL;
-		}
-		else
-		{
-			ft_lstadd(node, addend);
-		}
+		ft_lstappend(&map,ft_lstnew(f(lst)->content, f(lst)->content_size));
+		lst = lst->next;
 	}
+	return (map);
 }

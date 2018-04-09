@@ -6,7 +6,7 @@
 #    By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/05 11:36:52 by cpireyre          #+#    #+#              #
-#    Updated: 2018/04/09 15:56:27 by cpireyre         ###   ########.fr        #
+#    Updated: 2018/04/09 16:24:43 by cpireyre         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ MATH		=	ft_iswithin.c ft_min.c ft_max.c
 CONVERT		=	ft_tolower.c ft_toupper.c
 MEM			=	ft_memcpy.c ft_memdel.c ft_memset.c ft_memalloc.c ft_bzero.c ft_memcmp.c
 LIST		=	ft_lstnew.c ft_lstdelone.c ft_lstadd.c ft_lstiter.c ft_lstlast.c \
-				ft_lstdepth.c
+				ft_lstdepth.c ft_lstappend.c
 
 SRC_PATH	= 	./
 SRC_NAME	=	$(IO) $(STRING) $(CTYPE) $(MATH) $(CONVERT) $(MEM) $(LIST)

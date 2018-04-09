@@ -6,7 +6,7 @@
 #    By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/05 11:36:52 by cpireyre          #+#    #+#              #
-#    Updated: 2018/04/09 11:56:21 by cpireyre         ###   ########.fr        #
+#    Updated: 2018/04/09 12:06:29 by cpireyre         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,6 +40,7 @@ OBJ			=	$(addprefix $(OBJ_PATH),$(OBJ_NAME))
 FUNC		=	$(basename $(notdir $@))
 HEADER		:=	newlibft.h
 DEFHEADER	:=	$(shell echo $(HEADER) | tr . _ | tr a-z A-Z)
+STRUCT		=	structs
 
 all: $(NAME)
 
@@ -65,6 +66,7 @@ header:
 	@$(RM) $(HEADER)
 	@vim -c ':execute "normal\OP" | normal 12GJ' -c wq $(HEADER)
 	echo "#ifndef $(DEFHEADER)\n# define $(DEFHEADER)\n" >> $(HEADER)
+	cat $(STRUCT) >> $(HEADER) && echo "\n\c" >> $(HEADER)
 	@make clean
 	@make $(OBJ)
 	@vim -c ':let @i="0w4i	j0"' -c ':let @t="/ ft_VGNj:normal @i:noh" | \

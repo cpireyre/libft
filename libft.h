@@ -6,7 +6,7 @@
 /*   By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/06 10:30:56 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/04/09 07:50:02 by cpireyre         ###   ########.fr       */
+/*   Updated: 2018/04/09 09:31:37 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,12 @@ typedef struct		s_list
 	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
+
+typedef enum	e_bool
+{
+	false,
+	true
+}				t_bool;
 
 int					ft_isalnum(int c);
 int					ft_isalpha(int c);
@@ -46,5 +52,7 @@ void				ft_memdel(void **ap);
 void				*ft_memset(void *b, int c, size_t len);
 void				ft_bzero(void *s, size_t n);
 void				ft_lstadd(t_list **alst, t_list *new);
+void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
+t_list				*ft_lstlast(t_list *node);
 
 #endif

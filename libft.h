@@ -6,7 +6,7 @@
 /*   By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/06 10:30:56 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/04/09 07:43:21 by cpireyre         ###   ########.fr       */
+/*   Updated: 2018/04/09 07:50:02 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,6 @@ void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void				ft_memdel(void **ap);
 void				*ft_memset(void *b, int c, size_t len);
 void				ft_bzero(void *s, size_t n);
-void				ft_lstadd(t_list **alst, t_list *new)
+void				ft_lstadd(t_list **alst, t_list *new);
 
 #endif

@@ -6,7 +6,7 @@
 #    By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/05 11:36:52 by cpireyre          #+#    #+#              #
-#    Updated: 2018/04/08 12:19:05 by cpireyre         ###   ########.fr        #
+#    Updated: 2018/04/09 07:45:04 by cpireyre         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,7 @@ CTYPE		=	ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
 MATH		=	ft_iswithin.c ft_min.c ft_max.c
 CONVERT		=	ft_tolower.c ft_toupper.c
 MEM			=	ft_memcpy.c ft_memdel.c ft_memset.c ft_memalloc.c ft_bzero.c
-LIST		=	ft_lstnew.c ft_lstdelone.c
+LIST		=	ft_lstnew.c ft_lstdelone.c ft_lstadd.c
 
 SRC_PATH	= 	./
 SRC_NAME	=	$(IO) $(STRING) $(CTYPE) $(MATH) $(CONVERT) $(MEM) $(LIST)

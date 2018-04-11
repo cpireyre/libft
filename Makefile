@@ -6,7 +6,7 @@
 #    By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/05 11:36:52 by cpireyre          #+#    #+#              #
-#    Updated: 2018/04/11 15:07:02 by cpireyre         ###   ########.fr        #
+#    Updated: 2018/04/11 15:17:50 by cpireyre         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ NAME		=	libft.a
 
 IO			=	ft_putchar.c ft_putstr.c ft_putchar_fd.c ft_putstr_fd.c \
 				ft_putendl_fd.c ft_putendl.c ft_putnbr_fd.c ft_putnbr.c
-STRING		=	ft_strlen.c ft_strdup.c
+STRING		=	ft_strlen.c ft_strnew.c
 CTYPE		=	ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
 			   	ft_isprint.c ft_islower.c ft_isupper.c
 MATH		=	ft_iswithin.c ft_min.c ft_max.c

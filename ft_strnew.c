@@ -1,24 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/11 15:05:03 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/04/11 15:12:55 by cpireyre         ###   ########.fr       */
+/*   Updated: 2018/04/11 15:19:36 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(char *str)
+char	*ft_strnew(size_t len)
 {
-	char	*dup;
-	size_t	len;
+	char	*new;
 
-	len = ft_strlen(str);
-	dup = ft_memcpy(ft_memalloc(len), str, len);
-	*(dup + len) = 0;
-	return (dup);
+	new = ft_memalloc(len);
+	ft_bzero(new, len);
+	return (new);
 }

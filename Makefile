@@ -6,7 +6,7 @@
 #    By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/05 11:36:52 by cpireyre          #+#    #+#              #
-#    Updated: 2018/04/11 12:04:44 by cpireyre         ###   ########.fr        #
+#    Updated: 2018/04/11 13:24:13 by cpireyre         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,8 @@ CTYPE		=	ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
 			   	ft_isprint.c ft_islower.c ft_isupper.c
 MATH		=	ft_iswithin.c ft_min.c ft_max.c
 CONVERT		=	ft_tolower.c ft_toupper.c
-MEM			=	ft_memcpy.c ft_memdel.c ft_memset.c ft_memalloc.c ft_bzero.c ft_memcmp.c ft_memccpy.c
+MEM			=	ft_memcpy.c ft_memdel.c ft_memset.c ft_memalloc.c \
+				ft_bzero.c ft_memcmp.c ft_memccpy.c ft_memmove.c
 LIST		=	ft_lstnew.c ft_lstdelone.c ft_lstadd.c ft_lstiter.c ft_lstlast.c \
 				ft_lstdepth.c ft_lstappend.c ft_lstmap.c ft_lstdel.c
 

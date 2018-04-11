@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/10 09:00:35 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/04/11 12:59:54 by cpireyre         ###   ########.fr       */
+/*   Created: 2018/04/11 13:24:43 by cpireyre          #+#    #+#             */
+/*   Updated: 2018/04/11 13:24:45 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ void					*ft_memalloc(size_t size);
 void					ft_bzero(void *s, size_t n);
 int						ft_memcmp(const void *s1, const void *s2, size_t n);
 void					*ft_memccpy(void *d, const void *s, int c, size_t n);
+void					*ft_memmove(void *dst, const void *src, size_t len);
 t_list					*ft_lstnew(void const *content, size_t content_size);
 void					ft_lstdelone(t_list **a, void (*del)(void *, size_t));
 void					ft_lstadd(t_list **alst, t_list *new);

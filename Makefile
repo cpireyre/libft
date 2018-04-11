@@ -6,7 +6,7 @@
 #    By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/05 11:36:52 by cpireyre          #+#    #+#              #
-#    Updated: 2018/04/10 09:00:32 by cpireyre         ###   ########.fr        #
+#    Updated: 2018/04/11 12:04:44 by cpireyre         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,8 +46,8 @@ STRUCT		=	./structs
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(AR) $@ $^
-	$(RL) $@
+	@$(AR) $@ $^
+	@$(RL) $@
 
 $(OBJ_PATH)%.o: $(SRC_PATH)%.c
 	@mkdir $(OBJ_PATH) 2> /dev/null || true

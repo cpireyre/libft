@@ -6,7 +6,7 @@
 #    By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/05 11:36:52 by cpireyre          #+#    #+#              #
-#    Updated: 2018/04/11 14:38:26 by cpireyre         ###   ########.fr        #
+#    Updated: 2018/04/11 14:40:53 by cpireyre         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,8 @@ RM			:=	rm -f
 
 NAME		=	libft.a
 
-IO			=	ft_putchar.c ft_putstr.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c
+IO			=	ft_putchar.c ft_putstr.c ft_putchar_fd.c ft_putstr_fd.c \
+				ft_putendl_fd.c ft_putendl.c
 STRING		=	ft_strlen.c
 CTYPE		=	ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
 			   	ft_isprint.c ft_islower.c ft_isupper.c

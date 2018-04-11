@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/11 14:38:28 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/04/11 14:38:30 by cpireyre         ###   ########.fr       */
+/*   Created: 2018/04/11 14:40:54 by cpireyre          #+#    #+#             */
+/*   Updated: 2018/04/11 14:40:56 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ void					ft_putstr(char *str);
 void					ft_putchar_fd(char c, int fd);
 void					ft_putstr_fd(char const *s, int fd);
 void					ft_putendl_fd(char const *s, int fd);
+void					ft_putendl(char const *s);
 size_t					ft_strlen(const char *s);
 t_bool					ft_isalnum(int c);
 t_bool					ft_isalpha(int c);

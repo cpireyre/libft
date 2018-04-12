@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/12 13:32:11 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/04/12 13:56:23 by cpireyre         ###   ########.fr       */
+/*   Created: 2018/04/12 14:24:49 by cpireyre          #+#    #+#             */
+/*   Updated: 2018/04/12 14:24:52 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ char					*ft_strmap(char const *s, char (*f)(char));
 void					ft_strclr(char *s);
 void					ft_strdel(char **ap);
 char					*ft_strsub(char const *s, unsigned int o, size_t len);
+char					*ft_strchr(const char *s, int c);
 t_bool					ft_isalnum(int c);
 t_bool					ft_isalpha(int c);
 t_bool					ft_isascii(int c);
@@ -58,7 +59,7 @@ t_bool					ft_isupper(int c);
 t_bool					ft_iswithin(int c, int a, int b);
 int						ft_min(int a, int b);
 int						ft_max(int a, int b);
-int			ft_abs(int n);
+int						ft_abs(int n);
 size_t					ft_magnitude(int n);
 int						ft_tolower(int c);
 int						ft_toupper(int c);

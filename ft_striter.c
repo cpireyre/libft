@@ -6,7 +6,7 @@
 /*   By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/11 16:18:07 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/04/11 16:35:47 by cpireyre         ###   ########.fr       */
+/*   Updated: 2018/04/12 13:06:29 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ void	ft_striter(char *s, void (*f)(char *))
 {
 	size_t len;
 
-	len = ft_strlen(s);
 	if (!s || !f)
 		return ;
+	len = ft_strlen(s);
 	while (len--)
 		f(s + len);
 }

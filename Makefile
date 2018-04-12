@@ -6,7 +6,7 @@
 #    By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/05 11:36:52 by cpireyre          #+#    #+#              #
-#    Updated: 2018/04/11 17:32:19 by cpireyre         ###   ########.fr        #
+#    Updated: 2018/04/12 13:28:57 by cpireyre         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,8 +28,8 @@ STRING		=	ft_strlen.c ft_strnew.c ft_strncpy.c ft_strcpy.c ft_strdup.c \
 				ft_striter.c ft_strmap.c ft_strclr.c ft_strdel.c ft_strsub.c
 CTYPE		=	ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
 			   	ft_isprint.c ft_islower.c ft_isupper.c
-MATH		=	ft_iswithin.c ft_min.c ft_max.c
-CONVERT		=	ft_tolower.c ft_toupper.c
+MATH		=	ft_iswithin.c ft_min.c ft_max.c ft_abs.c ft_magnitude.c
+CONVERT		=	ft_tolower.c ft_toupper.c ft_itoa.c
 MEM			=	ft_memcpy.c ft_memdel.c ft_memset.c ft_memalloc.c \
 				ft_bzero.c ft_memcmp.c ft_memccpy.c ft_memmove.c ft_memchr.c
 LIST		=	ft_lstnew.c ft_lstdelone.c ft_lstadd.c ft_lstiter.c ft_lstlast.c \
@@ -77,7 +77,7 @@ header:
 		normal @t' -c "g/^int/normal wi	" -c wq $(HEADER)
 	echo "\n#endif" >> $(HEADER)
 	@cat $(HEADER)
-	norminette $(HEADER)
+#	norminette $(HEADER)
 	@make clean
 
 .PHONY: all, clean, fclean, re, header

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/11 17:33:03 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/04/11 17:33:06 by cpireyre         ###   ########.fr       */
+/*   Created: 2018/04/12 13:32:11 by cpireyre          #+#    #+#             */
+/*   Updated: 2018/04/12 13:56:23 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,8 +58,11 @@ t_bool					ft_isupper(int c);
 t_bool					ft_iswithin(int c, int a, int b);
 int						ft_min(int a, int b);
 int						ft_max(int a, int b);
+int			ft_abs(int n);
+size_t					ft_magnitude(int n);
 int						ft_tolower(int c);
 int						ft_toupper(int c);
+char					*ft_itoa(int n);
 void					*ft_memcpy(void *dst, const void *src, size_t n);
 void					ft_memdel(void **ap);
 void					*ft_memset(void *b, int c, size_t len);

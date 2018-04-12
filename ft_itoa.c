@@ -1,33 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmap.c                                        :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/11 16:36:54 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/04/12 13:06:45 by cpireyre         ###   ########.fr       */
+/*   Created: 2018/04/12 13:17:06 by cpireyre          #+#    #+#             */
+/*   Updated: 2018/04/12 14:07:00 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmap(char const *s, char (*f)(char))
+char	*ft_itoa(int n)
 {
-	char	*new;
-	size_t	len;
+	char			*nbr;
+	size_t			len;
+	t_byte			sign;
 
-	if (!s)
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
+	sign = (n < 0) ? 1 : 0;
+	n = ft_abs(n);
+	len = ft_magnitude(n) + sign;
+	nbr = ft_strnew(len);
+	if (!nbr)
 		return (NULL);
-	len = ft_strlen(s);
-	new = ft_strnew(len);
-	if (!new)
-		return (NULL);
-	while (*s)
+	while (len--)
 	{
-		*new = f(*s);
-		new++;
-		s++;
+		*(nbr + len) = n % 10 + 48;
+		n /= 10;
 	}
-	return (new - len);
+	if (sign)
+		*nbr = '-';
+	return (nbr);
 }

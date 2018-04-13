@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/12 14:24:49 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/04/12 14:24:52 by cpireyre         ###   ########.fr       */
+/*   Created: 2018/04/13 07:38:42 by cpireyre          #+#    #+#             */
+/*   Updated: 2018/04/13 07:38:45 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,9 @@ void					ft_strclr(char *s);
 void					ft_strdel(char **ap);
 char					*ft_strsub(char const *s, unsigned int o, size_t len);
 char					*ft_strchr(const char *s, int c);
+int						ft_strncmp(const char *s1, const char *s2, size_t n);
+char					*ft_strrev(char *str);
+char					*ft_strrchr(const char *s, int c);
 t_bool					ft_isalnum(int c);
 t_bool					ft_isalpha(int c);
 t_bool					ft_isascii(int c);
@@ -73,6 +76,7 @@ int						ft_memcmp(const void *s1, const void *s2, size_t n);
 void					*ft_memccpy(void *d, const void *s, int c, size_t n);
 void					*ft_memmove(void *d, const void *s, size_t len);
 void					*ft_memchr(const void *s, int c, size_t n);
+void					ft_swap(char *a, char *b);
 t_list					*ft_lstnew(void const *content, size_t content_size);
 void					ft_lstdelone(t_list **a, void (*del)(void *, size_t));
 void					ft_lstadd(t_list **alst, t_list *new);

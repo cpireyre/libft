@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/13 10:01:58 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/04/13 10:04:47 by cpireyre         ###   ########.fr       */
+/*   Created: 2018/04/13 10:17:36 by cpireyre          #+#    #+#             */
+/*   Updated: 2018/04/13 10:17:39 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,8 @@ int						ft_strcmp(const char *s1, const char *s2);
 int						ft_strnequ(char const *s1, char const *s2, size_t n);
 int						ft_strequ(char const *s1, char const *s2);
 void					ft_striteri(char *s, void (*f)(unsigned int, char *));
-char					*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char					*ft_strmapi(char const *s, char (*f)(t_uint, char));
+size_t					ft_strlcat(char *dst, const char *src, size_t size);
 t_bool					ft_isalnum(int c);
 t_bool					ft_isalpha(int c);
 t_bool					ft_isascii(int c);

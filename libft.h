@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/13 07:51:15 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/04/13 07:51:18 by cpireyre         ###   ########.fr       */
+/*   Created: 2018/04/13 08:41:10 by cpireyre          #+#    #+#             */
+/*   Updated: 2018/04/13 08:41:13 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ char					*ft_strchr(const char *s, int c);
 int						ft_strncmp(const char *s1, const char *s2, size_t n);
 char					*ft_strrev(char *str);
 char					*ft_strrchr(const char *s, int c);
+int						ft_strcmp(const char *s1, const char *s2);
 t_bool					ft_isalnum(int c);
 t_bool					ft_isalpha(int c);
 t_bool					ft_isascii(int c);

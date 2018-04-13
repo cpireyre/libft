@@ -6,7 +6,7 @@
 /*   By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/11 15:05:03 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/04/11 15:32:53 by cpireyre         ###   ########.fr       */
+/*   Updated: 2018/04/13 07:37:23 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ char	*ft_strnew(size_t len)
 {
 	char	*new;
 
-	if(!(new = ft_memalloc(len + 1)))
-			return (NULL);
+	if (!(new = ft_memalloc(len + 1)))
+		return (NULL);
 	ft_bzero(new, len + 1);
 	return (new);
 }

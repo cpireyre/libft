@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/13 07:38:42 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/04/13 07:38:45 by cpireyre         ###   ########.fr       */
+/*   Created: 2018/04/13 07:51:15 by cpireyre          #+#    #+#             */
+/*   Updated: 2018/04/13 07:51:18 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,7 @@ t_bool					ft_isdigit(int c);
 t_bool					ft_isprint(int c);
 t_bool					ft_islower(int c);
 t_bool					ft_isupper(int c);
+t_bool					ft_isspace(char c);
 t_bool					ft_iswithin(int c, int a, int b);
 int						ft_min(int a, int b);
 int						ft_max(int a, int b);

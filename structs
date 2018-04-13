@@ -14,3 +14,4 @@ typedef enum			e_bool
 }						t_bool;
 
 typedef unsigned char	t_byte;
+typedef unsigned int	t_uint;

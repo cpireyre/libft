@@ -1,21 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/12 16:48:41 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/04/13 14:39:54 by cpireyre         ###   ########.fr       */
+/*   Created: 2018/04/13 13:43:33 by cpireyre          #+#    #+#             */
+/*   Updated: 2018/04/13 14:54:45 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strncmp(const char *s1, const char *s2, size_t n)
+char	*ft_strstr(const char *h, const char *n)
 {
-	size_t l;
-
-	l = ft_min(ft_min(ft_strlen(s1) + 1, ft_strlen(s2) + 1), n);
-	return (ft_memcmp(s1, s2, l));
+	if (!*n)
+		return ((char*)h);
+	while (!ft_strequ(ft_strsub(h, 0, ft_strlen(n)), n) && *h)
+		h++;
+	return (*h ? (char*)h : NULL);
 }

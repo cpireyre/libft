@@ -6,17 +6,19 @@
 /*   By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/15 09:55:16 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/04/15 09:55:17 by cpireyre         ###   ########.fr       */
+/*   Updated: 2018/04/15 11:18:42 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(t_uint, char))
+typedef	unsigned int	t_uint;
+
+char					*ft_strmapi(char const *s, char (*f)(t_uint, char))
 {
-	char			*new;
-	size_t			len;
-	t_uint			i;
+	char		*new;
+	size_t		len;
+	t_uint		i;
 
 	i = 0;
 	if (!s || !f)

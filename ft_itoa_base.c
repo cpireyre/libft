@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa_base.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/04/15 09:31:48 by cpireyre          #+#    #+#             */
+/*   Updated: 2018/04/15 09:53:28 by cpireyre         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdlib.h>
 #include "libft.h"
 
@@ -18,7 +30,7 @@ char	*ft_itoa_base(int n, int base)
 	while (n /= base)
 		digits++;
 	if (!(str = ft_strnew(digits)))
-		return(NULL);
+		return (NULL);
 	if (sign)
 		str[0] = '-';
 	while (digits-- - sign)

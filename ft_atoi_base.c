@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi_base.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/04/15 09:31:56 by cpireyre          #+#    #+#             */
+/*   Updated: 2018/04/15 10:29:52 by cpireyre         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static int		checkbase(char c)
@@ -25,8 +37,8 @@ int				ft_atoi_base(char *nbr, int base)
 		nbr++;
 	if (*nbr == '-' || *nbr == '+')
 	{
+		sign = (*nbr == '-' ? -1 : 1);
 		nbr++;
-		sign = -1;
 	}
 	while (ft_isdigit(*nbr) || ft_isupper(*nbr))
 	{

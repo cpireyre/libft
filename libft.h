@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/15 15:32:31 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/04/15 15:32:35 by cpireyre         ###   ########.fr       */
+/*   Created: 2018/04/15 15:46:42 by cpireyre          #+#    #+#             */
+/*   Updated: 2018/04/15 16:27:49 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,7 @@ char					*ft_strnstr(const char *h, const char *n, size_t len);
 char					*ft_strncat(char *s1, char *s2, size_t n);
 char					*ft_strcat(char *s1, char *s2);
 char					*ft_strjoin(char const *s1, char const *s2);
+char					*ft_strtrim(char const *s);
 t_bool					ft_isalnum(int c);
 t_bool					ft_isalpha(int c);
 t_bool					ft_isascii(int c);
@@ -72,6 +73,7 @@ t_bool					ft_isprint(int c);
 t_bool					ft_islower(int c);
 t_bool					ft_isupper(int c);
 t_bool					ft_isspace(char c);
+t_bool					ft_isblank(int c);
 t_bool					ft_iswithin(int c, int a, int b);
 int						ft_min(int a, int b);
 int						ft_max(int a, int b);

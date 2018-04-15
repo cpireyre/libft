@@ -6,7 +6,7 @@
 /*   By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/13 13:43:33 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/04/13 14:54:45 by cpireyre         ###   ########.fr       */
+/*   Updated: 2018/04/15 11:46:42 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strstr(const char *h, const char *n)
 {
 	if (!*n)
 		return ((char*)h);
-	while (!ft_strequ(ft_strsub(h, 0, ft_strlen(n)), n) && *h)
+	while (!ft_strnequ(h, n, ft_strlen(n)) && *h)
 		h++;
 	return (*h ? (char*)h : NULL);
 }

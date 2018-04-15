@@ -6,7 +6,7 @@
 /*   By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/11 17:20:00 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/04/11 17:20:43 by cpireyre         ###   ########.fr       */
+/*   Updated: 2018/04/15 12:52:18 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 void	ft_strclr(char *s)
 {
+	if (!s)
+		return ;
 	ft_bzero(s, ft_strlen(s));
 }

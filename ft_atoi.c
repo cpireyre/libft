@@ -6,7 +6,7 @@
 /*   By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/15 09:45:06 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/04/15 10:30:27 by cpireyre         ###   ########.fr       */
+/*   Updated: 2018/04/15 12:43:00 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int		ft_atoi(char *nbr)
 		sign = (*nbr == '-' ? -1 : 1);
 		nbr++;
 	}
-	while (ft_isdigit(*nbr) || ft_isupper(*nbr))
+	while (ft_isdigit(*nbr))
 	{
 		sum *= 10;
 		sum += *nbr - 48;

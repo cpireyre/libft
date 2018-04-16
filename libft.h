@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/16 07:30:25 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/04/16 07:30:29 by cpireyre         ###   ########.fr       */
+/*   Created: 2018/04/16 08:00:39 by cpireyre          #+#    #+#             */
+/*   Updated: 2018/04/16 08:00:43 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,7 @@ char					*ft_strncat(char *s1, char *s2, size_t n);
 char					*ft_strcat(char *s1, char *s2);
 char					*ft_strjoin(char const *s1, char const *s2);
 char					*ft_strtrim(char const *s);
+char					**ft_strsplit(char *str, char c);
 t_bool					ft_isalnum(int c);
 t_bool					ft_isalpha(int c);
 t_bool					ft_isascii(int c);

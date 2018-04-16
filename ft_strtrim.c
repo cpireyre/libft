@@ -6,7 +6,7 @@
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/15 15:42:33 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/04/15 16:27:11 by cpireyre         ###   ########.fr       */
+/*   Updated: 2018/04/16 07:42:23 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,12 @@ char	*ft_strtrim(char const *s)
 
 	if (!s)
 		return (NULL);
-	while (ft_isblank(*s))
+	while (ft_isblank(*s) || *s == '\n')
 		s++;
+	if (!*s)
+		return ("\0");
 	j = ft_strlen(s);
-	while (ft_isblank(s[j - 1]))
+	while (ft_isblank(s[j - 1]) || s[j - 1] == '\n')
 		j--;
 	str = ft_strnew(j);
 	if (!str)

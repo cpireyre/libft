@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/16 08:00:39 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/04/16 08:00:43 by cpireyre         ###   ########.fr       */
+/*   Created: 2018/04/16 11:12:05 by cpireyre          #+#    #+#             */
+/*   Updated: 2018/04/16 13:19:32 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ int						ft_tolower(int c);
 int						ft_toupper(int c);
 char					*ft_itoa_base(int n, int base);
 int						ft_atoi_base(char *nbr, int base);
-int						ft_atoi(char *nbr);
+int						ft_atoi(const char *nbr);
 char					*ft_itoa(int n);
 void					*ft_memcpy(void *dst, const void *src, size_t n);
 void					ft_memdel(void **ap);

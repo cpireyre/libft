@@ -6,13 +6,13 @@
 /*   By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/15 09:45:06 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/04/15 12:43:00 by cpireyre         ###   ########.fr       */
+/*   Updated: 2018/04/16 13:19:38 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_atoi(char *nbr)
+int		ft_atoi(const char *nbr)
 {
 	int		sum;
 	int		sign;

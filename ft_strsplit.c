@@ -6,7 +6,7 @@
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/16 08:03:24 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/04/17 07:47:10 by cpireyre         ###   ########.fr       */
+/*   Updated: 2018/04/17 08:08:45 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static int		is_separator(char c, char a)
 	return (c == a);
 }
 
-static char		*ft_strchardup(char *str, char c)
+static char		*ft_strchardup(const char *str, char c)
 {
 	char	*dup;
 	int		i;
@@ -36,7 +36,7 @@ static char		*ft_strchardup(char *str, char c)
 	return (dup);
 }
 
-static int		ft_count_words(char *str, char c)
+static int		ft_count_words(char const *str, char c)
 {
 	int words;
 

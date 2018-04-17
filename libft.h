@@ -6,7 +6,7 @@
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/16 11:12:05 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/04/16 13:19:32 by cpireyre         ###   ########.fr       */
+/*   Updated: 2018/04/17 07:53:41 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ typedef unsigned char	t_byte;
 typedef unsigned int	t_uint;
 
 void					ft_putchar(char c);
-void					ft_putstr(char *str);
+void					ft_putstr(char const *str);
 void					ft_putchar_fd(char c, int fd);
 void					ft_putstr_fd(char const *s, int fd);
 void					ft_putendl_fd(char const *s, int fd);
@@ -43,7 +43,7 @@ size_t					ft_strlen(const char *s);
 char					*ft_strnew(size_t len);
 char					*ft_strncpy(char *dst, const char *src, size_t n);
 char					*ft_strcpy(char *dst, const char *src);
-char					*ft_strdup(char *str);
+char					*ft_strdup(const char *str);
 void					ft_striter(char *s, void (*f)(char *));
 char					*ft_strmap(char const *s, char (*f)(char));
 void					ft_strclr(char *s);
@@ -61,11 +61,11 @@ char					*ft_strmapi(char const *s, char (*f)(t_uint, char));
 size_t					ft_strlcat(char *dst, const char *src, size_t size);
 char					*ft_strstr(const char *h, const char *n);
 char					*ft_strnstr(const char *h, const char *n, size_t len);
-char					*ft_strncat(char *s1, char *s2, size_t n);
-char					*ft_strcat(char *s1, char *s2);
+char					*ft_strncat(char *s1, const char *s2, size_t n);
+char					*ft_strcat(char *s1, const char *s2);
 char					*ft_strjoin(char const *s1, char const *s2);
 char					*ft_strtrim(char const *s);
-char					**ft_strsplit(char *str, char c);
+char					**ft_strsplit(const char *str, char c);
 t_bool					ft_isalnum(int c);
 t_bool					ft_isalpha(int c);
 t_bool					ft_isascii(int c);

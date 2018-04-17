@@ -6,13 +6,13 @@
 /*   By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/05 09:48:26 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/04/08 08:41:21 by cpireyre         ###   ########.fr       */
+/*   Updated: 2018/04/17 07:39:31 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(char *str)
+void	ft_putstr(char const *str)
 {
 	if (str == NULL)
 		return ;

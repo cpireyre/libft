@@ -6,7 +6,7 @@
 /*   By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/05 09:48:26 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/04/17 07:39:31 by cpireyre         ###   ########.fr       */
+/*   Updated: 2018/04/25 08:41:46 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,5 @@
 
 void	ft_putstr(char const *str)
 {
-	if (str == NULL)
-		return ;
-	while (*str)
-	{
-		ft_putchar(*str);
-		str++;
-	}
+	ft_putstr_fd(str, 1);
 }

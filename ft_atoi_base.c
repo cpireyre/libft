@@ -6,7 +6,7 @@
 /*   By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/15 09:31:56 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/04/15 10:29:52 by cpireyre         ###   ########.fr       */
+/*   Updated: 2018/04/26 13:17:51 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,10 @@ static int		checkbase(char c)
 int				ft_atoi_base(char *nbr, int base)
 {
 	int		sum;
-	char	*basestr;
 	int		sign;
 
 	sum = 0;
 	sign = 1;
-	basestr = "0123456789ABCDEF";
 	while (ft_isspace(*nbr))
 		nbr++;
 	if (*nbr == '-' || *nbr == '+')

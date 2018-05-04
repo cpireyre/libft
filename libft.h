@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/16 11:12:05 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/04/17 07:53:41 by cpireyre         ###   ########.fr       */
+/*   Created: 2018/04/29 11:52:08 by cpireyre          #+#    #+#             */
+/*   Updated: 2018/04/29 11:52:13 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,7 @@ int						ft_min(int a, int b);
 int						ft_max(int a, int b);
 int						ft_abs(int n);
 size_t					ft_magnitude(int n);
+int						ft_sqrt(int n);
 int						ft_tolower(int c);
 int						ft_toupper(int c);
 char					*ft_itoa_base(int n, int base);

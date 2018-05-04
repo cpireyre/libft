@@ -6,7 +6,7 @@
 /*   By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/09 15:47:28 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/04/09 15:51:03 by cpireyre         ###   ########.fr       */
+/*   Updated: 2018/05/04 09:11:04 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t		ft_lstdepth(t_list *node)
 	size_t i;
 
 	i = 0;
-	while (node && node->next)
+	while (node)
 	{
 		node = node->next;
 		i++;

@@ -6,7 +6,7 @@
 /*   By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/08 11:51:15 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/04/08 12:01:22 by cpireyre         ###   ########.fr       */
+/*   Updated: 2018/04/28 13:51:45 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,6 @@ void	*ft_memalloc(size_t size)
 	mem = malloc(size);
 	if (!mem)
 		return (NULL);
-	mem = ft_memset(mem, 0, size);
+	ft_bzero(mem, size);
 	return (mem);
 }

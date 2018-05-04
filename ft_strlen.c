@@ -6,7 +6,7 @@
 /*   By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/05 10:16:24 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/04/06 10:26:40 by cpireyre         ###   ########.fr       */
+/*   Updated: 2018/05/04 11:48:23 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,12 @@ size_t	ft_strlen(const char *s)
 	size_t i;
 
 	i = 0;
-	while (s[i])
+	if (s && s[i])
 	{
-		i++;
+		while (s[i])
+		{
+			i++;
+		}
 	}
 	return (i);
 }

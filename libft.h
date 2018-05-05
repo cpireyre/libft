@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/29 11:52:08 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/04/29 11:52:13 by cpireyre         ###   ########.fr       */
+/*   Created: 2018/05/05 09:52:11 by cpireyre          #+#    #+#             */
+/*   Updated: 2018/05/05 09:52:16 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ void					ft_putendl_fd(char const *s, int fd);
 void					ft_putendl(char const *s);
 void					ft_putnbr_fd(int n, int fd);
 void					ft_putnbr(int n);
+void					ft_putnbr_endl(int n);
 size_t					ft_strlen(const char *s);
 char					*ft_strnew(size_t len);
 char					*ft_strncpy(char *dst, const char *src, size_t n);
@@ -97,6 +98,7 @@ void					*ft_memccpy(void *d, const void *s, int c, size_t n);
 void					*ft_memmove(void *d, const void *s, size_t len);
 void					*ft_memchr(const void *s, int c, size_t n);
 void					ft_swap(char *a, char *b);
+void					*ft_realloc(void *ptr, size_t size);
 t_list					*ft_lstnew(void const *content, size_t content_size);
 void					ft_lstdelone(t_list **a, void (*del)(void *, size_t));
 void					ft_lstadd(t_list **alst, t_list *new);

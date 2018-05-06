@@ -6,13 +6,13 @@
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/05 15:14:24 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/05/05 15:24:20 by cpireyre         ###   ########.fr       */
+/*   Updated: 2018/05/06 07:53:03 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strclen(char *str, char c)
+int		ft_strclen(const char *str, char c)
 {
 	size_t	i;
 

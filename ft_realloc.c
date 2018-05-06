@@ -6,7 +6,7 @@
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/05 08:44:14 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/05/05 09:51:58 by cpireyre         ###   ########.fr       */
+/*   Updated: 2018/05/06 07:53:03 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,10 @@ void	*ft_realloc(void *ptr, size_t size)
 	realloc = ft_memalloc(size);
 	if (!realloc)
 		return (NULL);
-	ft_memcpy(realloc, ptr, sizeof(ptr));
-	ft_putendl((char*)realloc);
-	ft_memdel(&ptr);
+	if (ptr)
+	{
+		ft_memcpy(realloc, ptr, size);
+		ft_memdel(&ptr);
+	}
 	return (realloc);
 }

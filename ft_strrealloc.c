@@ -6,7 +6,7 @@
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/13 09:20:58 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/05/13 09:23:48 by cpireyre         ###   ########.fr       */
+/*   Updated: 2018/05/13 12:46:23 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_strrealloc(char *str, size_t size)
 	realloc = ft_strnew(size);
 	if (!realloc)
 		return (NULL);
-	if (str && *str)
+	if (str)
 	{
 		ft_strcpy(realloc, str);
 		ft_strdel(&str);

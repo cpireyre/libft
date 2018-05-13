@@ -6,11 +6,12 @@
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/06 11:29:34 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/05/13 08:14:13 by cpireyre         ###   ########.fr       */
+/*   Updated: 2018/05/13 09:31:54 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <unistd.h>
 
 void	ft_putnstr(const char *str, size_t n)
 {

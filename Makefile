@@ -6,7 +6,7 @@
 #    By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/05 11:36:52 by cpireyre          #+#    #+#              #
-#    Updated: 2018/05/13 09:19:33 by cpireyre         ###   ########.fr        #
+#    Updated: 2018/05/13 09:53:54 by cpireyre         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,6 +58,7 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	@$(AR) $@ $^
 	@$(RL) $@
+	@$(RM) $(HEADER)
 
 $(OBJ_PATH)%.o: $(SRC_PATH)%.c
 	@mkdir $(OBJ_PATH) 2> /dev/null || true

@@ -14,7 +14,7 @@
 
 int		ft_strclen(const char *str, char c)
 {
-	size_t	i;
+	int		i;
 
 	i = 0;
 	if (!str)

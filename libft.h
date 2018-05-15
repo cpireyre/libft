@@ -6,7 +6,7 @@
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/13 09:21:04 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/05/13 09:21:06 by cpireyre         ###   ########.fr       */
+/*   Updated: 2018/05/15 07:52:10 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ char					*ft_strjoin(char const *s1, char const *s2);
 char					*ft_strtrim(char const *s);
 int						ft_strclen(const char *str, char c);
 char					**ft_strsplit(const char *str, char c);
-void					*ft_strrealloc(char *str, size_t size);
+char					*ft_strrealloc(char *str, size_t size);
 t_bool					ft_isalnum(int c);
 t_bool					ft_isalpha(int c);
 t_bool					ft_isascii(int c);

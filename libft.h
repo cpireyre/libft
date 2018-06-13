@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/19 08:00:20 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/05/19 08:00:25 by cpireyre         ###   ########.fr       */
+/*   Created: 2018/06/13 09:49:14 by cpireyre          #+#    #+#             */
+/*   Updated: 2018/06/13 09:49:20 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ void					ft_putnbr(int n);
 void					ft_putnbr_endl(int n);
 void					ft_putnstr(const char *str, size_t n);
 void					ft_print_bits(t_byte octet);
+void					ft_assert(t_bool condition);
 size_t					ft_strlen(const char *s);
 char					*ft_strnew(size_t len);
 char					*ft_strncpy(char *dst, const char *src, size_t n);

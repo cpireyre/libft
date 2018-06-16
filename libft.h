@@ -6,7 +6,7 @@
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/13 11:54:08 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/06/13 11:54:13 by cpireyre         ###   ########.fr       */
+/*   Updated: 2018/06/16 10:27:50 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define NEWLIBFT_H
 
 # include <string.h>
+# include "inttypes.h"
 
 typedef struct			s_list
 {
@@ -87,7 +88,7 @@ int						ft_max(int a, int b);
 int						ft_abs(int n);
 size_t					ft_magnitude(int n);
 int						ft_sqrt(int n);
-int						ft_count_digits_base(long long n, int base);
+int						ft_count_digits_base(intmax_t n, int base);
 int						ft_tolower(int c);
 int						ft_toupper(int c);
 char					*ft_itoa_base(int n, int base);

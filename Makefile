@@ -6,7 +6,7 @@
 #    By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/05 11:36:52 by cpireyre          #+#    #+#              #
-#    Updated: 2018/06/20 08:43:29 by cpireyre         ###   ########.fr        #
+#    Updated: 2018/06/23 10:34:07 by cpireyre         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,7 +65,7 @@ $(NAME): $(OBJ)
 	@echo "Done!"
 
 $(OBJ_PATH)%.o: $(SRC_PATH)%.c
-	@echo "🐿 \c"
+	@echo "\r$<\c"
 	@mkdir $(OBJ_PATH) 2> /dev/null || true
 	@$(CC) $(CFLAGS) $(BFLAGS) $@ $<
 	@echo `cat $(FUNC).c | grep $(FUNC) | sed -n "2p"`\; >> $(HEADER)

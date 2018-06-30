@@ -6,7 +6,7 @@
 #    By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/05 11:36:52 by cpireyre          #+#    #+#              #
-#    Updated: 2018/06/23 10:34:07 by cpireyre         ###   ########.fr        #
+#    Updated: 2018/06/30 09:40:23 by cpireyre         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,6 +65,7 @@ $(NAME): $(OBJ)
 	@echo "Done!"
 
 $(OBJ_PATH)%.o: $(SRC_PATH)%.c
+	@echo "\r                               \c"
 	@echo "\r$<\c"
 	@mkdir $(OBJ_PATH) 2> /dev/null || true
 	@$(CC) $(CFLAGS) $(BFLAGS) $@ $<

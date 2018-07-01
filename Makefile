@@ -6,7 +6,7 @@
 #    By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/05 11:36:52 by cpireyre          #+#    #+#              #
-#    Updated: 2018/07/01 09:06:03 by cpireyre         ###   ########.fr        #
+#    Updated: 2018/07/01 13:31:22 by cpireyre         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,9 +43,10 @@ MEM			=	ft_memcpy.c ft_memdel.c ft_memset.c ft_memalloc.c \
  				ft_swap.c ft_realloc.c
 LIST		=	ft_lstnew.c ft_lstdelone.c ft_lstadd.c ft_lstiter.c ft_lstlast.c \
 				ft_lstdepth.c ft_lstappend.c ft_lstmap.c ft_lstdel.c
+GNL			=	ft_gnl.c
 
 SRC_PATH	= 	./
-SRC_NAME	=	$(IO) $(STRING) $(CTYPE) $(MATH) $(CONVERT) $(MEM) $(LIST)
+SRC_NAME	=	$(IO) $(STRING) $(CTYPE) $(MATH) $(CONVERT) $(MEM) $(LIST) $(GNL)
 OBJ_PATH	= 	./obj/
 OBJ_NAME	=	$(SRC_NAME:.c=.o)
 SRC			=	$(addprefix $(SRC_PATH),$(SRC_NAME))
@@ -54,7 +55,7 @@ FUNC		=	$(basename $(notdir $@))
 HEADER		:=	newlibft.h
 DEFHEADER	:=	$(shell echo $(HEADER) | tr . _ | tr a-z A-Z)
 STRUCT		=	./structs
-DEPS		=	Makefile libft.h
+DEPS		=	Makefile libft.h get_next_line.h
 
 all: $(NAME)
 

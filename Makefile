@@ -6,7 +6,7 @@
 #    By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/05 11:36:52 by cpireyre          #+#    #+#              #
-#    Updated: 2018/07/01 13:31:22 by cpireyre         ###   ########.fr        #
+#    Updated: 2018/07/01 13:55:16 by cpireyre         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,7 +55,6 @@ FUNC		=	$(basename $(notdir $@))
 HEADER		:=	newlibft.h
 DEFHEADER	:=	$(shell echo $(HEADER) | tr . _ | tr a-z A-Z)
 STRUCT		=	./structs
-DEPS		=	Makefile libft.h get_next_line.h
 
 all: $(NAME)
 

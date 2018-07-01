@@ -6,7 +6,7 @@
 #    By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/05 11:36:52 by cpireyre          #+#    #+#              #
-#    Updated: 2018/06/30 09:40:23 by cpireyre         ###   ########.fr        #
+#    Updated: 2018/07/01 09:06:03 by cpireyre         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,10 +54,11 @@ FUNC		=	$(basename $(notdir $@))
 HEADER		:=	newlibft.h
 DEFHEADER	:=	$(shell echo $(HEADER) | tr . _ | tr a-z A-Z)
 STRUCT		=	./structs
+DEPS		=	Makefile libft.h
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
+$(NAME): $(OBJ) $(DEPS)
 	@echo "\nCompiling libft..."
 	@$(AR) $@ $^
 	@$(RL) $@
@@ -65,7 +66,7 @@ $(NAME): $(OBJ)
 	@echo "Done!"
 
 $(OBJ_PATH)%.o: $(SRC_PATH)%.c
-	@echo "\r                               \c"
+	@echo "\r                               \r\c"
 	@echo "\r$<\c"
 	@mkdir $(OBJ_PATH) 2> /dev/null || true
 	@$(CC) $(CFLAGS) $(BFLAGS) $@ $<

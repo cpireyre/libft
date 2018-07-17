@@ -6,7 +6,7 @@
 #    By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/05 11:36:52 by cpireyre          #+#    #+#              #
-#    Updated: 2018/07/01 13:55:16 by cpireyre         ###   ########.fr        #
+#    Updated: 2018/07/17 08:04:49 by cpireyre         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,12 +35,12 @@ STRING		=	ft_strlen.c ft_strnew.c ft_strncpy.c ft_strcpy.c ft_strdup.c \
 CTYPE		=	ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
 			   	ft_isprint.c ft_islower.c ft_isupper.c ft_isspace.c ft_isblank.c
 MATH		=	ft_iswithin.c ft_min.c ft_max.c ft_abs.c ft_magnitude.c ft_sqrt.c \
-				ft_count_digits_base.c ft_count_digits_base_unsigned.c
+				ft_count_digits_base.c ft_count_digits_base_unsigned.c ft_sort_tab.c
 CONVERT		=	ft_tolower.c ft_toupper.c ft_itoa_base.c ft_atoi_base.c \
 				ft_atoi.c ft_itoa.c
 MEM			=	ft_memcpy.c ft_memdel.c ft_memset.c ft_memalloc.c \
 				ft_bzero.c ft_memcmp.c ft_memccpy.c ft_memmove.c ft_memchr.c \
- 				ft_swap.c ft_realloc.c
+ 				ft_swap.c ft_realloc.c ft_swap_int.c
 LIST		=	ft_lstnew.c ft_lstdelone.c ft_lstadd.c ft_lstiter.c ft_lstlast.c \
 				ft_lstdepth.c ft_lstappend.c ft_lstmap.c ft_lstdel.c
 GNL			=	ft_gnl.c

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/07/17 15:21:53 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/07/17 15:21:58 by cpireyre         ###   ########.fr       */
+/*   Created: 2018/07/17 18:02:05 by cpireyre          #+#    #+#             */
+/*   Updated: 2018/07/17 18:02:10 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define NEWLIBFT_H
 
 # include <string.h>
+# include <stdlib.h>
 # include "inttypes.h"
 
 typedef struct			s_list

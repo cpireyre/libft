@@ -6,7 +6,7 @@
 #    By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/05 11:36:52 by cpireyre          #+#    #+#              #
-#    Updated: 2018/07/17 08:04:49 by cpireyre         ###   ########.fr        #
+#    Updated: 2018/07/17 15:21:51 by cpireyre         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,11 +33,12 @@ STRING		=	ft_strlen.c ft_strnew.c ft_strncpy.c ft_strcpy.c ft_strdup.c \
  				ft_strstr.c ft_strnstr.c ft_strncat.c ft_strcat.c ft_strjoin.c \
  				ft_strtrim.c ft_strsplit.c ft_strclen.c ft_strrealloc.c
 CTYPE		=	ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
-			   	ft_isprint.c ft_islower.c ft_isupper.c ft_isspace.c ft_isblank.c
+			   	ft_isprint.c ft_islower.c ft_isupper.c ft_isspace.c ft_isblank.c \
+				ft_isoption.c
 MATH		=	ft_iswithin.c ft_min.c ft_max.c ft_abs.c ft_magnitude.c ft_sqrt.c \
 				ft_count_digits_base.c ft_count_digits_base_unsigned.c ft_sort_tab.c
 CONVERT		=	ft_tolower.c ft_toupper.c ft_itoa_base.c ft_atoi_base.c \
-				ft_atoi.c ft_itoa.c
+				ft_atoi.c ft_itoa.c ft_options.c
 MEM			=	ft_memcpy.c ft_memdel.c ft_memset.c ft_memalloc.c \
 				ft_bzero.c ft_memcmp.c ft_memccpy.c ft_memmove.c ft_memchr.c \
  				ft_swap.c ft_realloc.c ft_swap_int.c

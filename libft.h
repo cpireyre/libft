@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/07/17 08:04:53 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/07/17 08:04:57 by cpireyre         ###   ########.fr       */
+/*   Created: 2018/07/17 15:21:53 by cpireyre          #+#    #+#             */
+/*   Updated: 2018/07/17 15:21:58 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,6 +84,7 @@ t_bool					ft_islower(int c);
 t_bool					ft_isupper(int c);
 t_bool					ft_isspace(char c);
 t_bool					ft_isblank(int c);
+t_bool					ft_isoption(const char *arg);
 t_bool					ft_iswithin(int c, int a, int b);
 int						ft_min(int a, int b);
 int						ft_max(int a, int b);
@@ -99,6 +100,7 @@ char					*ft_itoa_base(int n, int base);
 int						ft_atoi_base(char *nbr, int base);
 int						ft_atoi(const char *nbr);
 char					*ft_itoa(int n);
+int						ft_options(int argc, char **argv);
 void					*ft_memcpy(void *dst, const void *src, size_t n);
 void					ft_memdel(void **ap);
 void					*ft_memset(void *b, int c, size_t len);

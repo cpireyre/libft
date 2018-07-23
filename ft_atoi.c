@@ -6,7 +6,7 @@
 /*   By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/15 09:45:06 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/07/23 11:58:28 by cpireyre         ###   ########.fr       */
+/*   Updated: 2018/07/23 12:12:20 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ intmax_t	ft_atoi(const char *nbr)
 	is_negative = false;
 	while (ft_isspace(*nbr))
 		nbr++;
-	if (*nbr == '-' || *nbr == '+')
-		is_negative = (*(nbr++) == '-') ? true : false;
+	if ((is_negative = (*nbr == '-')) || *nbr == '+')
+		nbr++;
 	while (ft_isdigit(*nbr))
 		sum = (sum * 10) + (*(nbr++) - 48);
 	return (is_negative ? -sum : sum);

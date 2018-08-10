@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/07/23 12:02:04 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/07/23 12:03:33 by cpireyre         ###   ########.fr       */
+/*   Created: 2018/08/10 12:37:21 by cpireyre          #+#    #+#             */
+/*   Updated: 2018/08/10 12:38:00 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,5 +124,6 @@ void					ft_lstappend(t_list **node, t_list *addend);
 t_list					*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 void					ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 int						ft_gnl(const int fd, char **line);
+int						ft_printf(const char *format, ...);
 
 #endif

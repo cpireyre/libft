@@ -6,7 +6,7 @@
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/10 12:37:21 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/08/10 12:38:00 by cpireyre         ###   ########.fr       */
+/*   Updated: 2018/08/10 12:47:26 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <string.h>
 # include <stdlib.h>
+# include <unistd.h>
 # include "inttypes.h"
 
 typedef struct			s_list

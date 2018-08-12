@@ -6,7 +6,7 @@
 #    By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/05 11:36:52 by cpireyre          #+#    #+#              #
-#    Updated: 2018/08/10 12:49:13 by cpireyre         ###   ########.fr        #
+#    Updated: 2018/08/12 10:50:52 by cpireyre         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,9 +66,9 @@ STRUCT			=	./structs
 
 FTPRINTF_PATH	:=	./ft_printf
 
-all: $(NAME) printfuck
+all: $(NAME) 
 
-$(NAME): $(OBJ) $(DEPS)
+$(NAME): $(OBJ) $(DEPS) $(FTPRINTF_DEP)
 	@echo "\nCompiling libft..."
 	@$(AR) $@ $^
 	@$(RL) $@
@@ -84,9 +84,6 @@ $(OBJ_PATH)%.o: $(SRC_PATH)%.c
 
 $(FTPRINTFPATH)%.o:	$(FTPRINTF_C)%.c
 	@$(CC) $(CFLAGS) $(BFLAGS) $@ $<
-
-printfuck: $(NAME) $(FTPRINTF_DEP)
-	@$(AR) $(NAME) $(FTPRINTF_DEP)
 
 clean: 
 	@$(RM) $(OBJ) 

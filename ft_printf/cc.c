@@ -40,7 +40,7 @@ void	mb_char(t_printf *arg)
 	pad_right_text(arg);
 }
 
-void	u_char(t_printf *arg)
+void	unichar(t_printf *arg)
 {
 	unsigned char	c;
 

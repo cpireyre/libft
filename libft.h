@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/10 12:37:21 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/08/10 12:47:26 by cpireyre         ###   ########.fr       */
+/*   Created: 2018/09/01 11:26:04 by cpireyre          #+#    #+#             */
+/*   Updated: 2018/09/01 11:26:28 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <string.h>
 # include <stdlib.h>
-# include <unistd.h>
 # include "inttypes.h"
 
 typedef struct			s_list
@@ -45,7 +44,7 @@ void					ft_putnbr(int n);
 void					ft_putnbr_endl(int n);
 void					ft_putnstr(const char *str, size_t n);
 void					ft_print_bits(t_byte octet);
-void					ft_assert(t_bool condition);
+void					ft_assert(t_bool c, const char *y, const char *n);
 void					ft_putchar_unicode(wchar_t uchar);
 void					ft_putstr_unicode(wchar_t *ustr);
 size_t					ft_strlen(const char *s);

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/01 11:35:48 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/09/01 11:36:19 by cpireyre         ###   ########.fr       */
+/*   Created: 2018/09/01 11:56:47 by cpireyre          #+#    #+#             */
+/*   Updated: 2018/09/01 11:57:13 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ void					ft_print_bits(t_byte octet);
 void					ft_assert(t_bool c, const char *y, const char *n);
 void					ft_putchar_unicode(wchar_t uchar);
 void					ft_putstr_unicode(wchar_t *ustr);
+void					ft_print_int_tab(int *tab, int size);
 size_t					ft_strlen(const char *s);
 char					*ft_strnew(size_t len);
 char					*ft_strncpy(char *dst, const char *src, size_t n);

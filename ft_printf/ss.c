@@ -66,7 +66,7 @@ void	mb_string(t_printf *arg)
 	if (!str)
 		str = L"(null)";
 	pad = arg->op.fw - ((arg->op.fl & FLAG_PREC) ?
-			ft_min(will_print_ustr(str, arg->op.prec), ft_strwlen(str))
+			(size_t)ft_min(will_print_ustr(str, arg->op.prec), ft_strwlen(str))
 			: ft_strwlen(str));
 	if (pad > 0 && !(arg->op.fl & FLAG_DASH))
 		repeat_buf(&arg->buf, PAD, pad);
@@ -92,7 +92,7 @@ void	string(t_printf *arg)
 	if (!str)
 		str = "(null)";
 	pad = arg->op.fw - (arg->op.fl & FLAG_PREC ?
-			ft_min(ft_strlen(str), arg->op.prec) : ft_strlen(str));
+			(size_t)ft_min(ft_strlen(str), arg->op.prec) : ft_strlen(str));
 	if (pad > 0 && !(arg->op.fl & FLAG_DASH))
 		repeat_buf(&arg->buf, PAD, pad);
 	if (arg->op.fl & FLAG_PREC)

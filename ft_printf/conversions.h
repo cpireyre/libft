@@ -27,7 +27,7 @@ typedef	struct	s_conv
 */
 
 void			signed_dec(t_printf *arg);
-void			u_char(t_printf *arg);
+void			unichar(t_printf *arg);
 
 /*
  ** o, u, x, X. unsigned int conversions.
@@ -70,7 +70,7 @@ void			ptr_addr(t_printf *arg);
 static const	t_conv g_conversions[NBR_CONVERSIONS] = {
 	(t_conv){'d', &signed_dec},
 	(t_conv){'i', &signed_dec},
-	(t_conv){'c', &u_char},
+	(t_conv){'c', &unichar},
 	(t_conv){'o', &u_octal},
 	(t_conv){'u', &u_dec},
 	(t_conv){'x', &u_hex_low},

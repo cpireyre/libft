@@ -6,7 +6,7 @@
 #    By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/05 11:36:52 by cpireyre          #+#    #+#              #
-#    Updated: 2018/08/12 10:50:52 by cpireyre         ###   ########.fr        #
+#    Updated: 2018/09/01 11:35:39 by cpireyre         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,12 +45,14 @@ MEM				=	ft_memcpy.c ft_memdel.c ft_memset.c ft_memalloc.c \
 LIST			=	ft_lstnew.c ft_lstdelone.c ft_lstadd.c ft_lstiter.c ft_lstlast.c \
 					ft_lstdepth.c ft_lstappend.c ft_lstmap.c ft_lstdel.c
 GNL				=	ft_gnl.c
-FTPRINTF			=	buf.c buf_unicode.c cc.c conversions.c ddioo.c debug.c \
+FTPRINTF		=	buf.c buf_unicode.c cc.c conversions.c ddioo.c debug.c \
 					ft_printf.c get_op.c integer_conversions.c print_int_conv.c \
 					ss.c uuxx.c get_int_data.c	   
+FLOW			=	ft_exit.c
 
 SRC_PATH		= 	./
-SRC_NAME		=	$(IO) $(STRING) $(CTYPE) $(MATH) $(CONVERT) $(MEM) $(LIST) $(GNL)
+SRC_NAME		=	$(IO) $(STRING) $(CTYPE) $(MATH) $(CONVERT) $(MEM) $(LIST) $(GNL) \
+					$(FLOW)
 OBJ_PATH		= 	./obj/
 OBJ_NAME		=	$(SRC_NAME:.c=.o)
 FTPRINTFPATH	=	./ft_printf/

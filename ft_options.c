@@ -6,7 +6,7 @@
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/17 15:11:27 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/07/17 15:20:27 by cpireyre         ###   ########.fr       */
+/*   Updated: 2018/09/01 11:14:04 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,3 @@ int		ft_options(int argc, char **argv)
 	}
 	return (bits);
 }
-

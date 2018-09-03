@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_gnl.c                                           :+:      :+:    :+:   */
+/*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/07/01 13:29:47 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/07/01 13:32:51 by cpireyre         ###   ########.fr       */
+/*   Created: 2018/05/04 10:20:41 by cpireyre          #+#    #+#             */
+/*   Updated: 2018/09/03 12:47:32 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,52 +49,23 @@ static void	get_one_line(char **gnl, char **line)
 	}
 }
 
-t_gnl		*get_fd(const int fd, t_gnl ***gnl)
-{
-	t_gnl	*tmp;
-	size_t	i;
-
-	if (!*gnl)
-	{
-		*gnl = ft_memalloc(sizeof(t_gnl*));
-		**gnl = ft_memalloc(sizeof(t_gnl));
-	}
-	tmp = **gnl;
-	i = 0;
-	while (tmp)
-	{
-		if (tmp->fd == fd)
-			return (tmp);
-		tmp = tmp->next;
-		i++;
-	}
-	*gnl = ft_realloc(*gnl, sizeof(t_gnl*) * (i + 1));
-	tmp = ft_memalloc(sizeof(t_gnl));
-	tmp->fd = fd;
-	tmp->next = **gnl;
-	**gnl = tmp;
-	return (tmp);
-}
-
 int			ft_gnl(const int fd, char **line)
 {
-	static t_gnl	**gnl;
-	t_gnl			*tmp;
+	static char		*gnl[10240];
 	char			buf[BUFF_SIZE + 1];
 	int				ret;
 
 	if (!line || fd < 0)
 		return (-1);
-	tmp = get_fd(fd, &gnl);
-	while ((ret = read(tmp->fd, buf, BUFF_SIZE)) || (tmp->str && *(tmp->str)))
+	while ((ret = read(fd, buf, BUFF_SIZE)) || (gnl[fd] && *(gnl[fd])))
 	{
 		if (ret < 0 || (buf[ret] = 0))
 			return (-1);
-		free_cat(&tmp->str, buf);
-		if (tmp->str && *(tmp->str) && (ft_strchr(tmp->str, SPLIT)
+		free_cat(&gnl[fd], buf);
+		if (gnl[fd] && *(gnl[fd]) && (ft_strchr(gnl[fd], SPLIT)
 					|| ret < BUFF_SIZE))
 		{
-			get_one_line(&(tmp->str), line);
+			get_one_line(&(gnl[fd]), line);
 			return (1);
 		}
 	}

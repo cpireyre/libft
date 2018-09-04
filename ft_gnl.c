@@ -40,7 +40,7 @@ static void	get_one_line(char **gnl, char **line)
 		*line = ft_strdup(*gnl);
 		tmp = *gnl;
 		*gnl = ft_strdup(tmp + split + 1);
-		free(tmp);
+		ft_strdel(&tmp);
 	}
 	else
 	{
@@ -69,5 +69,6 @@ int			ft_gnl(const int fd, char **line)
 			return (1);
 		}
 	}
+	ft_strdel(&gnl[fd]);
 	return (0);
 }

@@ -57,11 +57,14 @@ int			ft_gnl(const int fd, char **line)
 
 	if (!line || fd < 0)
 		return (-1);
+	if (*line)
+		ft_strdel(line);
 	while ((ret = read(fd, buf, BUFF_SIZE)) || (gnl[fd] && *(gnl[fd])))
 	{
 		if (ret < 0 || (buf[ret] = 0))
 			return (-1);
-		free_cat(&gnl[fd], buf);
+		if (buf[0])
+			free_cat(&gnl[fd], buf);
 		if (gnl[fd] && *(gnl[fd]) && (ft_strchr(gnl[fd], SPLIT)
 					|| ret < BUFF_SIZE))
 		{

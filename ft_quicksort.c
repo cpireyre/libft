@@ -41,7 +41,7 @@ static void	sort_partitions(int *tab, int left, int right)
 }
 			
 
-void	ft_quicksort(int *tab, size_t size)
+void	ft_quicksort(int *tab, int size)
 {
 	sort_partitions(tab, 0, size - 1);
 }

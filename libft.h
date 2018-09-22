@@ -96,7 +96,7 @@ int						ft_sqrt(int n);
 int						ft_count_digits_base(intmax_t n, int base);
 int						ft_count_digits_base_unsigned(uintmax_t n, int base);
 void					ft_sort_tab(int *tab, size_t size);
-void					ft_quicksort(int *tab, size_t size);
+void					ft_quicksort(int *tab, int size);
 int						ft_tolower(int c);
 int						ft_toupper(int c);
 char					*ft_itoa_base(int n, int base);

@@ -20,5 +20,6 @@ void	ft_print_int_tab(int *tab, int size)
 		ft_printf("Empty tab.\n");
 	i = -1;
 	while (++i < size)
-		ft_printf("tab[%d] = %d\n", i, tab[i]);
+		ft_printf("tab[%d] = %d ", i, tab[i]);
+	ft_putchar('\n');
 }

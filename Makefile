@@ -36,7 +36,7 @@ CTYPE			=	ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
 				   	ft_isprint.c ft_islower.c ft_isupper.c ft_isspace.c ft_isblank.c \
 					ft_isoption.c
 MATH			=	ft_iswithin.c ft_min.c ft_max.c ft_abs.c ft_magnitude.c ft_sqrt.c \
-					ft_count_digits_base.c ft_count_digits_base_unsigned.c ft_sort_tab.c
+					ft_count_digits_base.c ft_count_digits_base_unsigned.c ft_sort_tab.c ft_quicksort.c
 CONVERT			=	ft_tolower.c ft_toupper.c ft_itoa_base.c ft_atoi_base.c \
 					ft_atoi.c ft_itoa.c ft_options.c
 MEM				=	ft_memcpy.c ft_memdel.c ft_memset.c ft_memalloc.c \

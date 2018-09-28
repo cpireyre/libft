@@ -31,7 +31,7 @@ STRING			=	ft_strlen.c ft_strnew.c ft_strncpy.c ft_strcpy.c ft_strdup.c \
 					ft_strchr.c ft_strncmp.c ft_strrev.c ft_strrchr.c ft_strcmp.c \
  					ft_strnequ.c ft_strequ.c ft_striteri.c ft_strmapi.c ft_strlcat.c \
  					ft_strstr.c ft_strnstr.c ft_strncat.c ft_strcat.c ft_strjoin.c \
- 					ft_strtrim.c ft_strsplit.c ft_strclen.c ft_strrealloc.c
+ 					ft_strtrim.c ft_strsplit.c ft_strclen.c ft_strrealloc.c ft_strsplen.c
 CTYPE			=	ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
 				   	ft_isprint.c ft_islower.c ft_isupper.c ft_isspace.c ft_isblank.c \
 					ft_isoption.c

@@ -76,6 +76,7 @@ char					*ft_strjoin(char const *s1, char const *s2);
 char					*ft_strtrim(char const *s);
 char					**ft_strsplit(const char *str, char c);
 int						ft_strclen(const char *str, char c);
+size_t	ft_strsplen(const char *str);
 char					*ft_strrealloc(char *str, size_t size);
 t_bool					ft_isalnum(int c);
 t_bool					ft_isalpha(int c);

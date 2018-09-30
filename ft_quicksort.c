@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_quicksort.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/09/30 17:56:46 by cpireyre          #+#    #+#             */
+/*   Updated: 2018/09/30 17:57:02 by cpireyre         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static void	sort_partitions(int *tab, int left, int right)
@@ -27,9 +39,8 @@ static void	sort_partitions(int *tab, int left, int right)
 	sort_partitions(tab, left, i - 1);
 	sort_partitions(tab, j + 1, right);
 }
-			
 
-void	ft_quicksort(int *tab, int size)
+void		ft_quicksort(int *tab, int size)
 {
 	sort_partitions(tab, 0, size - 1);
 }

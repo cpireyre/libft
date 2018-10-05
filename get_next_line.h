@@ -13,7 +13,7 @@
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 
-# define BUFF_SIZE	4096
+# define GNL_BUFF	4096
 # define SPLIT		'\n'
 # include "libft.h"
 # include <stdlib.h>

@@ -52,21 +52,21 @@ static void	get_one_line(char **gnl, char **line)
 int			ft_gnl(const int fd, char **line)
 {
 	static char		*gnl[10240];
-	char			buf[BUFF_SIZE + 1];
+	char			buf[GNL_BUFF + 1];
 	int				ret;
 
 	if (!line || fd < 0)
 		return (-1);
 	if (*line)
 		ft_strdel(line);
-	while ((ret = read(fd, buf, BUFF_SIZE)) || (gnl[fd] && *(gnl[fd])))
+	while ((ret = read(fd, buf, GNL_BUFF)) || (gnl[fd] && *(gnl[fd])))
 	{
 		if (ret < 0 || (buf[ret] = 0))
 			return (-1);
 		if (buf[0])
 			free_cat(&gnl[fd], buf);
 		if (gnl[fd] && *(gnl[fd]) && (ft_strchr(gnl[fd], SPLIT)
-					|| ret < BUFF_SIZE))
+					|| ret < GNL_BUFF))
 		{
 			get_one_line(&(gnl[fd]), line);
 			return (1);

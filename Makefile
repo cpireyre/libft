@@ -6,7 +6,7 @@
 #    By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/05 11:36:52 by cpireyre          #+#    #+#              #
-#    Updated: 2018/09/01 11:56:39 by cpireyre         ###   ########.fr        #
+#    Updated: 2018/11/05 16:33:11 by cpireyre         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,7 @@ STRING			=	ft_strlen.c ft_strnew.c ft_strncpy.c ft_strcpy.c ft_strdup.c \
  					ft_strtrim.c ft_strsplit.c ft_strclen.c ft_strrealloc.c ft_strsplen.c
 CTYPE			=	ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
 				   	ft_isprint.c ft_islower.c ft_isupper.c ft_isspace.c ft_isblank.c \
-					ft_isoption.c
+					ft_isoption.c ft_isint.c
 MATH			=	ft_iswithin.c ft_min.c ft_max.c ft_abs.c ft_magnitude.c ft_sqrt.c \
 					ft_count_digits_base.c ft_count_digits_base_unsigned.c ft_sort_tab.c ft_quicksort.c
 CONVERT			=	ft_tolower.c ft_toupper.c ft_itoa_base.c ft_atoi_base.c \

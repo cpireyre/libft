@@ -6,7 +6,7 @@
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/01 11:56:47 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/09/30 17:59:47 by cpireyre         ###   ########.fr       */
+/*   Updated: 2018/11/05 16:34:45 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,6 +90,7 @@ t_bool					ft_isspace(char c);
 t_bool					ft_isblank(int c);
 t_bool					ft_isoption(const char *arg);
 t_bool					ft_iswithin(int c, int a, int b);
+t_bool					ft_isint(const char *arg);
 int						ft_min(int a, int b);
 int						ft_max(int a, int b);
 int						ft_abs(int n);

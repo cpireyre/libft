@@ -6,7 +6,7 @@
 #    By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/05 11:36:52 by cpireyre          #+#    #+#              #
-#    Updated: 2018/11/05 16:33:11 by cpireyre         ###   ########.fr        #
+#    Updated: 2018/11/06 17:07:24 by cpireyre         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,8 @@
 CC				=	gcc	
 CFLAGS			=	-Wall -Wextra -Werror -I.
 BFLAGS			=	-c -o
+#DEBUG			:=	-g3 -fsanitize=address -fsanitize=undefined 
+
 
 AR				:=	ar rc
 RL				:= 	ranlib
@@ -81,11 +83,11 @@ $(OBJ_PATH)%.o: $(SRC_PATH)%.c
 	@echo "\r                               \r\c"
 	@echo "\r$<\c"
 	@mkdir $(OBJ_PATH) 2> /dev/null || true
-	@$(CC) $(CFLAGS) $(BFLAGS) $@ $<
+	@$(CC) $(DEBUG) $(CFLAGS) $(BFLAGS) $@ $<
 	@echo `cat $(FUNC).c | grep $(FUNC) | sed -n "2p"`\; >> $(HEADER)
 
 $(FTPRINTFPATH)%.o:	$(FTPRINTF_C)%.c
-	@$(CC) $(CFLAGS) $(BFLAGS) $@ $<
+	@$(CC) $(DEBUG) $(CFLAGS) $(BFLAGS) $@ $<
 
 clean: 
 	@$(RM) $(OBJ) 

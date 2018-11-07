@@ -18,6 +18,7 @@ static void	init_printf(t_printf *data, va_list *ap)
 	data->buf.pos = 0;
 	data->buf.filedesc = 1;
 	data->buf.written = 0;
+	data->error = false;
 }
 
 int			convert(t_printf *data, const char *format)

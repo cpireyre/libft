@@ -6,7 +6,7 @@
 /*   By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/15 09:31:48 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/04/15 09:53:28 by cpireyre         ###   ########.fr       */
+/*   Updated: 2018/11/08 08:12:38 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_itoa_base(int n, int base)
 	char	*basestr;
 	t_bool	sign;
 
-	if (!ft_iswithin(base, 2, 16))
+	if (!(2 <= base && base <= 16))
 		return (NULL);
 	sign = (n < 0 && base == 10) ? 1 : 0;
 	basestr = "0123456789ABCDEF";

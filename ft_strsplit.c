@@ -6,7 +6,7 @@
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/16 08:03:24 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/04/17 08:08:45 by cpireyre         ###   ########.fr       */
+/*   Updated: 2018/11/08 17:19:18 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ char			**ft_strsplit(const char *str, char c)
 
 	i = 0;
 	words = ft_count_words(str, c);
-	if (!(split = malloc(sizeof(char*) * (words + 1))) || !str)
+	if (!(split = ft_memalloc(sizeof(char*) * (words + 1))) || !str)
 		return (NULL);
 	while (i < words)
 	{
@@ -73,6 +73,6 @@ char			**ft_strsplit(const char *str, char c)
 			str++;
 		i++;
 	}
-	split[i] = 0;
+	split[i] = NULL;
 	return (split);
 }

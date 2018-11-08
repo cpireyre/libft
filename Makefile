@@ -6,7 +6,7 @@
 #    By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/05 11:36:52 by cpireyre          #+#    #+#              #
-#    Updated: 2018/11/08 11:51:52 by cpireyre         ###   ########.fr        #
+#    Updated: 2018/11/08 11:54:08 by cpireyre         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,6 @@ CC				=	gcc
 CFLAGS			=	-Wall -Wextra -Werror -I.
 BFLAGS			=	-c -o
 #DEBUG			:=	-g3 -fsanitize=address -fsanitize=undefined 
-
 
 AR				:=	ar rc
 RL				:= 	ranlib

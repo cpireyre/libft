@@ -6,7 +6,7 @@
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/01 11:56:47 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/11/08 08:09:47 by cpireyre         ###   ########.fr       */
+/*   Updated: 2018/11/14 13:15:57 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,15 @@
 # include <stdlib.h>
 # include "inttypes.h"
 # include "ft_printf/buf.h"
+
+typedef struct		s_tree
+{
+	void			*content;
+	size_t			content_size;
+	struct s_tree	*parent;
+	struct s_tree	*sibling;
+	struct s_tree	*child;
+}					t_tree;
 
 typedef struct			s_list
 {
@@ -130,5 +139,9 @@ void					ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 int						ft_gnl(const int fd, char **line);
 void					ft_exit(const char *errmsg, int status);
 int						ft_printf(const char *format, ...);
+t_tree					*ft_tree_new(void const *content, size_t content_size);
+void					ft_tree_addsibling(t_tree **tree, t_tree *sibling);
+void					ft_tree_addchild(t_tree **tree, t_tree *child);
+void					ft_tree_free(t_tree **tree);
 
 #endif

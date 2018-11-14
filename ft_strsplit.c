@@ -6,7 +6,7 @@
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/16 08:03:24 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/11/08 17:19:18 by cpireyre         ###   ########.fr       */
+/*   Updated: 2018/11/14 13:50:54 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static char		*ft_strchardup(const char *str, char c)
 	char	*dup;
 	int		i;
 
-	dup = malloc(sizeof(char) * ft_strlen(str) + 1);
+	dup = ft_memalloc(sizeof(char) * ft_strlen(str) + 1);
 	if (!dup)
 		return (NULL);
 	i = 0;

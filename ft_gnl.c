@@ -6,7 +6,7 @@
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/04 10:20:41 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/09/03 12:47:32 by cpireyre         ###   ########.fr       */
+/*   Updated: 2018/11/21 12:17:06 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ static void	get_one_line(char **gnl, char **line)
 
 int			ft_gnl(const int fd, char **line)
 {
-	static char		*gnl[10240];
+	static char		*gnl[OPEN_MAX];
 	char			buf[GNL_BUFF + 1];
 	int				ret;
 

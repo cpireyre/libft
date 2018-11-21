@@ -13,7 +13,11 @@
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 
-# include <sys/syslimits.h>
+		# if defined(__APPLE__) && defined(__MACH__)
+				# include <sys/syslimits.h>
+		# else
+				# define OPEN_MAX 10240
+		# endif
 
 # define GNL_BUFF	4096
 # define SPLIT		'\n'

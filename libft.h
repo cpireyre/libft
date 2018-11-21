@@ -6,7 +6,7 @@
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/01 11:56:47 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/11/14 13:15:57 by cpireyre         ###   ########.fr       */
+/*   Updated: 2018/11/21 08:56:16 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,14 @@
 # include "inttypes.h"
 # include "ft_printf/buf.h"
 
-typedef struct		s_tree
+typedef struct			s_tree
 {
 	void			*content;
 	size_t			content_size;
 	struct s_tree	*parent;
 	struct s_tree	*sibling;
 	struct s_tree	*child;
-}					t_tree;
+}						t_tree;
 
 typedef struct			s_list
 {

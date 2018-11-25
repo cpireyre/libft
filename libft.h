@@ -6,15 +6,13 @@
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/01 11:56:47 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/11/25 10:15:20 by cpireyre         ###   ########.fr       */
+/*   Updated: 2018/11/25 14:03:44 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef NEWLIBFT_H
 # define NEWLIBFT_H
 
-# include <string.h>
-# include <stdlib.h>
 # include "inttypes.h"
 # include "ft_printf/buf.h"
 

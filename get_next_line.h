@@ -6,18 +6,18 @@
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/04 12:33:30 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/11/21 12:16:55 by cpireyre         ###   ########.fr       */
+/*   Updated: 2018/11/24 17:04:14 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 
-		# if defined(__APPLE__) && defined(__MACH__)
-				# include <sys/syslimits.h>
-		# else
-				# define OPEN_MAX 10240
-		# endif
+# if defined(__APPLE__) && defined(__MACH__)
+#  include <sys/syslimits.h>
+# else
+#  define OPEN_MAX 10240
+# endif
 
 # define GNL_BUFF	4096
 # define SPLIT		'\n'

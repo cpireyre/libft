@@ -6,7 +6,7 @@
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/01 11:56:47 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/11/21 08:56:16 by cpireyre         ###   ########.fr       */
+/*   Updated: 2018/11/25 10:15:20 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,7 @@ int						ft_strcmp(const char *s1, const char *s2);
 int						ft_strnequ(char const *s1, char const *s2, size_t n);
 int						ft_strequ(char const *s1, char const *s2);
 void					ft_striteri(char *s, void (*f)(unsigned int, char *));
+int						ft_strcountif(const char *str, t_bool (*check)(char));
 char					*ft_strmapi(char const *s, char (*f)(t_uint, char));
 size_t					ft_strlcat(char *dst, const char *src, size_t size);
 char					*ft_strstr(const char *h, const char *n);
@@ -108,6 +109,7 @@ int						ft_count_digits_base(intmax_t n, int base);
 int						ft_count_digits_base_unsigned(uintmax_t n, int base);
 void					ft_sort_tab(int *tab, size_t size);
 void					ft_quicksort(int *tab, int size);
+int						ft_array_min(int *array, int size);
 int						ft_tolower(int c);
 int						ft_toupper(int c);
 char					*ft_itoa_base(int n, int base);

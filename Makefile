@@ -6,14 +6,14 @@
 #    By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/05 11:36:52 by cpireyre          #+#    #+#              #
-#    Updated: 2018/11/14 13:16:56 by cpireyre         ###   ########.fr        #
+#    Updated: 2018/11/25 10:50:50 by cpireyre         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #!/bin/sh
 
 CC				=	gcc	
-CFLAGS			=	-Wall -Wextra -Werror -I.
+CFLAGS			=	-Wall -Wextra -Werror -I. -O1
 BFLAGS			=	-c -o
 #DEBUG			:=	-g3 -fsanitize=address -fsanitize=undefined 
 
@@ -32,13 +32,14 @@ STRING			=	ft_strlen.c ft_strnew.c ft_strncpy.c ft_strcpy.c ft_strdup.c \
 					ft_strchr.c ft_strncmp.c ft_strrev.c ft_strrchr.c ft_strcmp.c \
  					ft_strnequ.c ft_strequ.c ft_striteri.c ft_strmapi.c ft_strlcat.c \
  					ft_strstr.c ft_strnstr.c ft_strncat.c ft_strcat.c ft_strjoin.c \
- 					ft_strtrim.c ft_strsplit.c ft_strclen.c ft_strrealloc.c ft_strsplen.c
+ 					ft_strtrim.c ft_strsplit.c ft_strclen.c ft_strrealloc.c ft_strsplen.c \
+					ft_strcountif.c
 CTYPE			=	ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
 				   	ft_isprint.c ft_islower.c ft_isupper.c ft_isspace.c ft_isblank.c \
 					ft_isoption.c ft_isint.c
 MATH			=	ft_min.c ft_max.c ft_abs.c ft_magnitude.c ft_sqrt.c \
 					ft_count_digits_base.c ft_count_digits_base_unsigned.c ft_sort_tab.c \
-					ft_quicksort.c
+					ft_quicksort.c ft_array_min.c
 CONVERT			=	ft_tolower.c ft_toupper.c ft_itoa_base.c ft_atoi_base.c \
 					ft_atoi.c ft_itoa.c ft_options.c
 MEM				=	ft_memcpy.c ft_memdel.c ft_memset.c ft_memalloc.c \

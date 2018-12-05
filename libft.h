@@ -129,6 +129,7 @@ void					*ft_realloc(void *ptr, size_t size);
 void					ft_swap_int(int *a, int *b);
 t_list					*ft_lstnew(void const *content, size_t content_size);
 void					ft_lstdelone(t_list **a, void (*del)(void *, size_t));
+void					ft_free_node(void *ptr, size_t size);
 void					ft_lstadd(t_list **alst, t_list *new);
 void					ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list					*ft_lstlast(t_list *node);

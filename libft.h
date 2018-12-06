@@ -96,6 +96,7 @@ t_bool					ft_islower(int c);
 t_bool					ft_isupper(int c);
 t_bool					ft_isspace(char c);
 t_bool					ft_isblank(int c);
+t_bool					ft_isdash(char to_check);
 t_bool					ft_isoption(const char *arg);
 t_bool					ft_isint(const char *arg);
 int						ft_min(int a, int b);

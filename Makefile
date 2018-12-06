@@ -42,7 +42,7 @@ STRING			=	ft_strlen.c ft_strnew.c ft_strncpy.c ft_strcpy.c ft_strdup.c \
 					ft_strcountif.c
 CTYPE			=	ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
 				   	ft_isprint.c ft_islower.c ft_isupper.c ft_isspace.c ft_isblank.c \
-					ft_isoption.c ft_isint.c
+					ft_isoption.c ft_isint.c ft_isdash.c
 MATH			=	ft_min.c ft_max.c ft_abs.c ft_magnitude.c ft_sqrt.c \
 					ft_count_digits_base.c ft_count_digits_base_unsigned.c ft_sort_tab.c \
 					ft_quicksort.c ft_array_min.c

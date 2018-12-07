@@ -19,7 +19,7 @@
 #  define OPEN_MAX 10240
 # endif
 
-# define GNL_BUFF	4096
+# define GNL_BUFF	1
 # define SPLIT		'\n'
 # include "libft.h"
 # include <stdlib.h>

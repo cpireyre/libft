@@ -6,7 +6,7 @@
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/25 10:08:29 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/11/25 10:15:21 by cpireyre         ###   ########.fr       */
+/*   Updated: 2018/12/10 08:05:09 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,3 @@ int						ft_strcountif(const char *str, t_bool (*check)(char))
 	}
 	return (count);
 }
-

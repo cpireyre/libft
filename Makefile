@@ -6,7 +6,7 @@
 #    By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/05 11:36:52 by cpireyre          #+#    #+#              #
-#    Updated: 2018/11/25 10:50:50 by cpireyre         ###   ########.fr        #
+#    Updated: 2018/12/10 08:14:16 by cpireyre         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -86,11 +86,11 @@ $(NAME): $(OBJ) $(DEPS) $(FTPRINTF_DEP)
 	@$(AR) $@ $^
 	@$(RL) $@
 	@$(RM) $(HEADER)
-	@echo "Done!"
+	@echo "Merry Christmas!"
 
 $(OBJ_PATH)%.o: $(SRC_PATH)%.c
 	@echo "\r                               \r\c"
-	@echo "\r$<\c"
+	@echo "\r🎄 $< 🎄\c"
 	@mkdir $(OBJ_PATH) 2> /dev/null || true
 	@$(CC) $(DEBUG) $(CFLAGS) $(BFLAGS) $@ $<
 	@echo `cat $(FUNC).c | grep $(FUNC) | sed -n "2p"`\; >> $(HEADER)

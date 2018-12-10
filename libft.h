@@ -32,6 +32,8 @@ typedef struct			s_list
 	struct s_list	*next;
 }						t_list;
 
+typedef t_list**		t_listarray;
+
 typedef enum			e_bool
 {
 	false,

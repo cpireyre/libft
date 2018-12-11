@@ -6,13 +6,13 @@
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/11 11:48:29 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/12/11 13:50:54 by cpireyre         ###   ########.fr       */
+/*   Updated: 2018/12/11 15:21:44 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static void	init_printf(t_printf *data, va_list *ap)
+static void			init_printf(t_printf *data, va_list *ap)
 {
 	data->ap = ap;
 	data->buf.pos = 0;
@@ -21,7 +21,7 @@ static void	init_printf(t_printf *data, va_list *ap)
 	data->error = false;
 }
 
-int			convert(t_printf *data, const char *format)
+int					convert(t_printf *data, const char *format)
 {
 	size_t	j;
 	void	(*conv)(t_printf *);

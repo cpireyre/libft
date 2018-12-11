@@ -6,7 +6,7 @@
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/11 11:48:29 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/06/23 09:58:25 by cpireyre         ###   ########.fr       */
+/*   Updated: 2018/12/11 13:50:54 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int			convert(t_printf *data, const char *format)
 	return (j);
 }
 
-int			ft_printf(const char *format, ...)
+extern int			ft_printf(const char *format, ...)
 {
 	t_printf	data;
 	va_list		ap;

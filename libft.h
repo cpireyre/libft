@@ -6,7 +6,7 @@
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/01 11:56:47 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/11/25 14:03:44 by cpireyre         ###   ########.fr       */
+/*   Updated: 2018/12/11 15:08:49 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -140,6 +140,7 @@ size_t					ft_lstdepth(t_list *node);
 void					ft_lstappend(t_list **node, t_list *addend);
 t_list					*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 void					ft_lstdel(t_list **alst, void (*del)(void *, size_t));
+t_list					*ft_stdin_to_list(void);
 int						ft_gnl(const int fd, char **line);
 void					ft_exit(const char *errmsg, int status);
 int						ft_printf(const char *format, ...);

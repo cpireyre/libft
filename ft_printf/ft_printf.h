@@ -6,7 +6,7 @@
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/16 10:45:00 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/06/23 10:10:39 by cpireyre         ###   ########.fr       */
+/*   Updated: 2018/12/11 14:54:36 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ typedef void		(*t_func)(t_printf *);
 
 t_op				get_op(const char *spec);
 t_func				get_conversion(const char arg);
-int					ft_printf(const char *format, ...);
+extern int			ft_printf(const char *format, ...);
 
 # define DEBUG 0
 

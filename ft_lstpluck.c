@@ -3,23 +3,24 @@
 void	ft_lstpluck(t_list **list, t_list **to_del, void (*del)(void *, size_t))
 {
 	t_list	*tmp;
-	t_list	*save;
+	t_list	*new_next;
 
-	if (!to_del || !list || !*to_del || !*list)
-		return ;
-	tmp = *list;
 	if (*list == *to_del)
-		save = (*list)->next;
+	{
+		tmp = (*list)->next;
+		ft_lstdelone(to_del, del);
+		*list = tmp;
+	}
 	else
-		save = *list;
-	while (tmp->next && tmp->next != *to_del)
-		tmp = tmp->next;
-	*list = tmp;
-	if (tmp->next)
-		tmp = (*list)->next->next;
-	else
-		tmp = NULL;
-	ft_lstdelone(to_del, del);
-	(*list)->next = tmp;
-	*list = save;
+	{
+		new_next = (*to_del)->next;
+		tmp = (*list);
+		while (*list && (*list)->next != *to_del)
+			*list = (*list)->next;
+		if (!*list)
+			return ;
+		ft_lstdelone(to_del, del);
+		(*list)->next = new_next;
+		*list = tmp;
+	}
 }

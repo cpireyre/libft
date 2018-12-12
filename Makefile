@@ -21,7 +21,7 @@ UNAME_S 		:= $(shell uname -s)
 	endif
 CFLAGS			=	-Wall -Wextra -Werror -I. $(OPTIFLAG)
 BFLAGS			=	-c -o
-#DEBUG			:=	-g3 -fsanitize=address -fsanitize=undefined 
+DEBUG			:=	-g3 #-fsanitize=address -fsanitize=undefined 
 
 AR				:=	ar rc
 RL				:= 	ranlib
@@ -45,7 +45,7 @@ CTYPE			=	ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
 					ft_isoption.c ft_isint.c ft_isdash.c
 MATH			=	ft_min.c ft_max.c ft_abs.c ft_magnitude.c ft_sqrt.c \
 					ft_count_digits_base.c ft_count_digits_base_unsigned.c ft_sort_tab.c \
-					ft_quicksort.c ft_array_min.c
+					ft_quicksort.c ft_array_min.c ft_tab_avg.c
 CONVERT			=	ft_tolower.c ft_toupper.c ft_itoa_base.c ft_atoi_base.c \
 					ft_atoi.c ft_itoa.c ft_options.c
 MEM				=	ft_memcpy.c ft_memdel.c ft_memset.c ft_memalloc.c \
@@ -54,7 +54,7 @@ MEM				=	ft_memcpy.c ft_memdel.c ft_memset.c ft_memalloc.c \
 LIST			=	ft_lstnew.c ft_lstdelone.c ft_lstadd.c ft_lstiter.c ft_lstlast.c \
 					ft_lstdepth.c ft_lstappend.c ft_lstmap.c ft_lstdel.c ft_stdin_to_list.c \
 					ft_tree_new.c ft_tree_free.c ft_tree_addsibling.c ft_tree_addchild.c \
-					ft_free_node.c
+					ft_free_node.c ft_lstpluck.c
 GNL				=	ft_gnl.c
 FTPRINTF		=	buf.c buf_unicode.c cc.c conversions.c ddioo.c debug.c \
 					ft_printf.c get_op.c integer_conversions.c print_int_conv.c \

@@ -86,11 +86,10 @@ $(NAME): $(OBJ) $(DEPS) $(FTPRINTF_DEP)
 	@$(AR) $@ $^
 	@$(RL) $@
 	@$(RM) $(HEADER)
-	@echo "Merry Christmas!"
 
 $(OBJ_PATH)%.o: $(SRC_PATH)%.c
 	@echo "\r                               \r\c"
-	@echo "\r🎄 $< 🎄\c"
+	@echo "\r$<\c"
 	@mkdir $(OBJ_PATH) 2> /dev/null || true
 	@$(CC) $(DEBUG) $(CFLAGS) $(BFLAGS) $@ $<
 	@echo `cat $(FUNC).c | grep $(FUNC) | sed -n "2p"`\; >> $(HEADER)

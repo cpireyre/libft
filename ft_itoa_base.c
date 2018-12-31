@@ -6,7 +6,7 @@
 /*   By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/15 09:31:48 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/11/08 08:12:38 by cpireyre         ###   ########.fr       */
+/*   Updated: 2018/12/31 15:37:04 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,7 @@ char	*ft_itoa_base(int n, int base)
 	nbr = (long)n * (n < 0 ? -1 : 1);
 	while (n /= base)
 		digits++;
-	if (!(str = ft_strnew(digits)))
-		return (NULL);
+	str = ft_strnew(digits);
 	if (sign)
 		str[0] = '-';
 	while (digits-- - sign)

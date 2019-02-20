@@ -6,22 +6,22 @@
 #    By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/05 11:36:52 by cpireyre          #+#    #+#              #
-#    Updated: 2018/12/13 10:32:05 by cpireyre         ###   ########.fr        #
+#    Updated: 2019/02/20 09:15:21 by cpireyre         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #!/bin/sh
 
 CC				=	gcc	
-UNAME_S 		:= $(shell uname -s)
-	ifeq ($(UNAME_S),Linux)
-		OPTIFLAG := -O0
-	else
-		OPTIFLAG := -O1
-	endif
+#UNAME_S 		:= $(shell uname -s)
+#	ifeq ($(UNAME_S),Linux)
+#		OPTIFLAG := -O0
+#	else
+#		OPTIFLAG := -O1
+#	endif
 CFLAGS			=	-Wall -Wextra -Werror -I. $(OPTIFLAG)
 BFLAGS			=	-c -o
-DEBUG			:=	-g3 #-fsanitize=address -fsanitize=undefined 
+#DEBUG			:=	-g3 #-fsanitize=address -fsanitize=undefined 
 
 AR				:=	ar rc
 RL				:= 	ranlib
@@ -82,25 +82,20 @@ FTPRINTF_PATH	:=	./ft_printf
 all: $(NAME) 
 
 $(NAME): $(OBJ) $(DEPS) $(FTPRINTF_DEP)
-	@echo "\nCompiling libft..."
-	@$(AR) $@ $^
-	@$(RL) $@
-	@$(RM) $(HEADER)
+	$(AR) $@ $^
+	$(RL) $@
 
 $(OBJ_PATH)%.o: $(SRC_PATH)%.c
-	@echo "\r                               \r\c"
-	@echo "\r$<\c"
 	@mkdir $(OBJ_PATH) 2> /dev/null || true
-	@$(CC) $(DEBUG) $(CFLAGS) $(BFLAGS) $@ $<
-	@echo `cat $(FUNC).c | grep $(FUNC) | sed -n "2p"`\; >> $(HEADER)
+	$(CC) $(DEBUG) $(CFLAGS) $(BFLAGS) $@ $<
 
 $(FTPRINTFPATH)%.o:	$(FTPRINTF_C)%.c
-	@$(CC) $(DEBUG) $(CFLAGS) $(BFLAGS) $@ $<
+	$(CC) $(DEBUG) $(CFLAGS) $(BFLAGS) $@ $<
 
 clean: 
-	@$(RM) $(OBJ) 
-	@$(RM) $(FTPRINTF_DEP)
-	@rmdir $(OBJ_PATH) 2> /dev/null || true
+	$(RM) $(OBJ) 
+	$(RM) $(FTPRINTF_DEP)
+	rmdir $(OBJ_PATH) 2> /dev/null || true
 
 fclean: clean
 	$(RM) $(NAME)

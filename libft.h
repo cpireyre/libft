@@ -144,6 +144,7 @@ void					ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void					ft_lstpluck(t_list **l, \
 t_list **t, void (*del)(void *, size_t));
 t_list					*ft_stdin_to_list(void);
+t_list* merge_sort_list_recursive(t_list *list,int (*compare)(t_list *one,t_list *two));
 int						ft_gnl(const int fd, char **line);
 void					ft_exit(const char *errmsg, int status);
 int						ft_printf(const char *format, ...);

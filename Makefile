@@ -54,7 +54,7 @@ MEM				=	ft_memcpy.c ft_memdel.c ft_memset.c ft_memalloc.c \
 LIST			=	ft_lstnew.c ft_lstdelone.c ft_lstadd.c ft_lstiter.c ft_lstlast.c \
 					ft_lstdepth.c ft_lstappend.c ft_lstmap.c ft_lstdel.c ft_stdin_to_list.c \
 					ft_tree_new.c ft_tree_free.c ft_tree_addsibling.c ft_tree_addchild.c \
-					ft_free_node.c ft_lstpluck.c
+					ft_free_node.c ft_lstpluck.c ft_lstsort.c
 GNL				=	ft_gnl.c
 FTPRINTF		=	buf.c buf_unicode.c cc.c conversions.c ddioo.c debug.c \
 					ft_printf.c get_op.c integer_conversions.c print_int_conv.c \

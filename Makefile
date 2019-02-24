@@ -12,15 +12,15 @@
 
 #!/bin/sh
 
-CC				=	gcc	
+CC				:=	gcc
 #UNAME_S 		:= $(shell uname -s)
 #	ifeq ($(UNAME_S),Linux)
 #		OPTIFLAG := -O0
 #	else
 #		OPTIFLAG := -O1
 #	endif
-CFLAGS			=	-Wall -Wextra -Werror -I. $(OPTIFLAG)
-BFLAGS			=	-c -o
+CFLAGS			:=	-Wall -Wextra -Werror -I. $(OPTIFLAG)
+BFLAGS			:=	-c -o
 #DEBUG			:=	-g3 #-fsanitize=address -fsanitize=undefined 
 
 AR				:=	ar rc

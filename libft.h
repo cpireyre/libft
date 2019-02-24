@@ -6,7 +6,7 @@
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/01 11:56:47 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/12/14 16:21:24 by cpireyre         ###   ########.fr       */
+/*   Updated: 2019/02/20 09:34:30 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,7 +118,7 @@ char					*ft_itoa_base(int n, int base);
 int						ft_atoi_base(char *nbr, int base);
 intmax_t				ft_atoi(const char *nbr);
 char					*ft_itoa(int n);
-int						ft_options(int argc, char **argv);
+long					ft_options(int argc, char **argv);
 void					*ft_memcpy(void *dst, const void *src, size_t n);
 void					ft_memdel(void **ap);
 void					*ft_memset(void *b, int c, size_t len);

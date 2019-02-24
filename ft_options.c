@@ -6,13 +6,13 @@
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/17 15:11:27 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/09/01 11:14:04 by cpireyre         ###   ########.fr       */
+/*   Updated: 2019/02/20 09:34:11 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_options(int argc, char **argv)
+long		ft_options(int argc, char **argv)
 {
 	int		i;
 	int		bits;
@@ -21,14 +21,17 @@ int		ft_options(int argc, char **argv)
 	i = 1;
 	while (i < argc)
 	{
-		if (ft_isoption(argv[i]) == 0)
+		if (!ft_isoption(argv[i]))
 			return (0);
-		else if (ft_isoption(argv[i]) == 1)
+		else
 		{
 			argv[i]++;
 			while (*(argv[i]))
 			{
-				bits = bits | (1 << (*argv[i] - 'a'));
+				if (ft_islower((int)argv[i]))
+					bits = bits | (1 << (*argv[i] - 'a'));
+				else
+					bits = bits | (1 << ((*argv[i] - 'a') + 26));
 				argv[i]++;
 			}
 		}

@@ -28,7 +28,7 @@ long		ft_options(int argc, char **argv)
 			argv[i]++;
 			while (*(argv[i]))
 			{
-				if (ft_islower((int)argv[i]))
+				if (ft_islower((int)*argv[i]))
 					bits = bits | (1 << (*argv[i] - 'a'));
 				else
 					bits = bits | (1 << ((*argv[i] - 'a') + 26));

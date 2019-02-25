@@ -21,7 +21,7 @@ t_list	*ft_stdin_to_list(void)
 
 	l = NULL;
 	usr_in = NULL;
-	while ((ret = ft_gnl(0, &l)))
+	while ((ret = ft_gnl(STDIN_FILENO, &l)))
 	{
 		if (ret == -1)
 			ft_exit("Error whilst reading file.", EXIT_FAILURE);

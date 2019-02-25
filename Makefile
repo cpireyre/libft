@@ -32,7 +32,8 @@ NAME			=	libft.a
 IO				=	ft_putchar.c ft_putstr.c ft_putchar_fd.c ft_putstr_fd.c \
 					ft_putendl_fd.c ft_putendl.c ft_putnbr_fd.c ft_putnbr.c \
  					ft_putnbr_endl.c ft_putnstr.c ft_print_bits.c ft_assert.c \
-					ft_putchar_unicode.c ft_putstr_unicode.c ft_print_int_tab.c
+					ft_putchar_unicode.c ft_putstr_unicode.c ft_print_int_tab.c \
+					ft_print_node.c
 STRING			=	ft_strlen.c ft_strnew.c ft_strncpy.c ft_strcpy.c ft_strdup.c \
 					ft_striter.c ft_strmap.c ft_strclr.c ft_strdel.c ft_strsub.c \
 					ft_strchr.c ft_strncmp.c ft_strrev.c ft_strrchr.c ft_strcmp.c \

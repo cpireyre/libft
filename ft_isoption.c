@@ -14,10 +14,13 @@
 
 t_bool		ft_isoption(const char *arg)
 {
-	if (!arg || *arg != '-')
+	const char *ptr;
+
+	ptr = arg;
+	if (!ptr || *ptr != '-')
 		return (0);
-	while (*(++arg))
-		if (!ft_isalpha(*arg))
+	while (*(++ptr))
+		if (!ft_isalpha(*ptr))
 			return (0);
 	return (1);
 }

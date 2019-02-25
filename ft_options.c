@@ -15,24 +15,24 @@
 long		ft_options(int argc, char **argv)
 {
 	int		i;
-	int		bits;
+	long	bits;
+	char	*ptr;
 
 	bits = 0;
 	i = 1;
 	while (i < argc)
 	{
-		if (!ft_isoption(argv[i]))
-			return (0);
-		else
+		ptr = argv[i];
+		if (ft_isoption(ptr))
 		{
-			argv[i]++;
-			while (*(argv[i]))
+			ptr++;
+			while (*(ptr))
 			{
-				if (ft_islower((int)*argv[i]))
-					bits = bits | (1 << (*argv[i] - 'a'));
+				if (ft_islower((int)*ptr))
+					bits = bits | (1 << (*ptr - 'a'));
 				else
-					bits = bits | (1 << ((*argv[i] - 'a') + 26));
-				argv[i]++;
+					bits = bits | (1 << ((*ptr - 'a') + 26));
+				ptr++;
 			}
 		}
 		i++;

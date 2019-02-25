@@ -58,6 +58,7 @@ void					ft_assert(t_bool c, const char *y, const char *n);
 void					ft_putchar_unicode(wchar_t uchar);
 void					ft_putstr_unicode(wchar_t *ustr);
 void					ft_print_int_tab(int *tab, int size);
+void					ft_print_node(t_list *node);
 size_t					ft_strlen(const char *s);
 char					*ft_strnew(size_t len);
 char					*ft_strncpy(char *dst, const char *src, size_t n);

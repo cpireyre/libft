@@ -6,7 +6,7 @@
 #    By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/05 11:36:52 by cpireyre          #+#    #+#              #
-#    Updated: 2019/02/28 07:33:46 by cpireyre         ###   ########.fr        #
+#    Updated: 2019/02/28 09:38:12 by cpireyre         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ BFLAGS			:=	-c -o
 
 AR				:=	ar rc
 RL				:= 	ranlib
-RM				:=	rm -f
+RM				:=	rm -rf
 
 NAME			=	libft.a
 
@@ -94,8 +94,8 @@ $(FTPRINTFPATH)%.o:	$(FTPRINTF_C)%.c
 	$(CC) $(DEBUG) $(CFLAGS) $(BFLAGS) $@ $<
 
 clean: 
-	$(RM) $(OBJ) 
-	$(RM) $(FTPRINTF_DEP)
+	$(RM) $(OBJ_PATH) 
+	@$(RM) $(FTPRINTF_DEP)
 	rmdir $(OBJ_PATH) 2> /dev/null || true
 
 fclean: clean

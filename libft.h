@@ -6,7 +6,7 @@
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/01 11:56:47 by cpireyre          #+#    #+#             */
-/*   Updated: 2019/02/28 07:29:31 by cpireyre         ###   ########.fr       */
+/*   Updated: 2019/02/28 07:33:35 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -132,6 +132,7 @@ void					*ft_memchr(const void *s, int c, size_t n);
 void					ft_swap(char *a, char *b);
 void					*ft_realloc(void *ptr, size_t size);
 void					ft_swap_int(int *a, int *b);
+t_list					*ft_lstid(t_list *list);
 t_list					*ft_lstnew(void const *content, size_t content_size);
 void					ft_lstdelone(t_list **a, void (*del)(void *, size_t));
 void					ft_free_node(void *ptr, size_t size);

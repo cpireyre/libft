@@ -143,9 +143,11 @@ size_t					ft_lstdepth(t_list *node);
 void					ft_lstappend(t_list **node, t_list *addend);
 t_list					*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 void					ft_lstdel(t_list **alst, void (*del)(void *, size_t));
-void					ft_lstpluck(t_list **l, \
-t_list **t, void (*del)(void *, size_t));
 t_list					*ft_stdin_to_list(void);
+t_list					*ft_lstpluck(t_list *curr, t_list *to_del, \
+void (*del)(void *, size_t));
+t_list					*ft_lstremoveif(t_list *h, t_bool (*c)(t_list*), \
+void (*del)(void *, size_t));
 t_list					*merge_sort_list_recursive(t_list *list, int (*compare)(t_list *one, t_list *two));
 t_list					*ft_lstrev(t_list *head);
 int						ft_gnl(const int fd, char **line);

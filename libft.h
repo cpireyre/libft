@@ -6,7 +6,7 @@
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/01 11:56:47 by cpireyre          #+#    #+#             */
-/*   Updated: 2019/02/28 10:59:07 by cpireyre         ###   ########.fr       */
+/*   Updated: 2019/02/28 13:48:59 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -146,7 +146,7 @@ void					ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void					ft_lstpluck(t_list **l, \
 t_list **t, void (*del)(void *, size_t));
 t_list					*ft_stdin_to_list(void);
-t_list					*merge_sort_list_recursive(t_list *list, int (*compare)(t_list *one, t_list *two));
+t_list					*ft_lstsort(t_list *list, int (*compare)(t_list *one, t_list *two));
 t_list					*ft_lstrev(t_list *head);
 int						ft_gnl(const int fd, char **line);
 void					ft_exit(const char *errmsg, int status);

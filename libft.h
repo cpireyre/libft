@@ -6,7 +6,7 @@
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/01 11:56:47 by cpireyre          #+#    #+#             */
-/*   Updated: 2019/03/02 10:48:49 by cpireyre         ###   ########.fr       */
+/*   Updated: 2019/03/02 10:52:36 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -144,7 +144,8 @@ void					ft_lstappend(t_list **node, t_list *addend);
 t_list					*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 void					ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 t_list					*ft_stdin_to_list(void);
-t_list					*ft_lstsort(t_list *list, int (*compare)(t_list *one, t_list *two));
+t_list					*ft_lstsort(t_list *list, \
+int (*cmp)(t_list *a, t_list *b));
 t_list					*ft_lstpluck(t_list *curr, t_list *to_del, \
 void (*del)(void *, size_t));
 t_list					*ft_lstremoveif(t_list *h, t_bool (*c)(t_list*), \

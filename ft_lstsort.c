@@ -6,7 +6,7 @@
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/28 13:58:31 by cpireyre          #+#    #+#             */
-/*   Updated: 2019/02/28 14:18:21 by cpireyre         ###   ########.fr       */
+/*   Updated: 2019/03/02 11:15:52 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,12 @@ static t_list		*ft_lsthalf(t_list *list)
 	return (half);
 }
 
+static void			assign(t_list **next, t_list **toassign)
+{
+	*next = *toassign;
+	*toassign = (*toassign)->next;
+}
+
 static t_list		*ft_lstmerge(t_list *left, t_list *right, \
 int (*compare)(t_list *one, t_list *two))
 {
@@ -43,25 +49,13 @@ int (*compare)(t_list *one, t_list *two))
 	while (left || right)
 	{
 		if (!right)
-		{
-			next = left;
-			left = left->next;
-		}
+			assign(&next, &left);
 		else if (!left)
-		{
-			next = right;
-			right = right->next;
-		}
+			assign(&next, &right);
 		else if (compare(left, right) < 0)
-		{
-			next = left;
-			left = left->next;
-		}
+			assign(&next, &left);
 		else
-		{
-			next = right;
-			right = right->next;
-		}
+			assign(&next, &right);
 		if (!result)
 			result = next;
 		else

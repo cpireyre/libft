@@ -6,16 +6,16 @@
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/17 15:11:27 by cpireyre          #+#    #+#             */
-/*   Updated: 2019/02/28 07:43:42 by cpireyre         ###   ########.fr       */
+/*   Updated: 2019/03/05 16:19:10 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-long		ft_options(int argc, char **argv)
+unsigned long long		ft_options(int argc, char **argv)
 {
 	int		i;
-	long	bits;
+	unsigned long long	bits;
 	char	*ptr;
 
 	bits = 0;
@@ -29,9 +29,9 @@ long		ft_options(int argc, char **argv)
 			while (*(ptr))
 			{
 				if (ft_islower((int)*ptr))
-					bits = bits | (1 << (*ptr - 'a'));
+					bits = bits | (1ULL << (*ptr - 'a'));
 				else
-					bits = bits | (1 << ((*ptr - 'A') + 26));
+					bits = bits | (1ULL << ((*ptr - 'A') + 26));
 				ptr++;
 			}
 		}

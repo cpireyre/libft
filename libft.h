@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   newlibft.h                                         :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/01 11:56:47 by cpireyre          #+#    #+#             */
-/*   Updated: 2019/03/02 10:52:36 by cpireyre         ###   ########.fr       */
+/*   Updated: 2019/03/05 16:24:25 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef NEWLIBFT_H
-# define NEWLIBFT_H
+#ifndef LIBFT_H
+# define LIBFT_H
 
 # include "inttypes.h"
 # include "ft_printf/buf.h"
@@ -119,7 +119,7 @@ char					*ft_itoa_base(int n, int base);
 int						ft_atoi_base(char *nbr, int base);
 intmax_t				ft_atoi(const char *nbr);
 char					*ft_itoa(int n);
-long					ft_options(int argc, char **argv);
+unsigned long long		ft_options(int argc, char **argv);
 void					*ft_memcpy(void *dst, const void *src, size_t n);
 void					ft_memdel(void **ap);
 void					*ft_memset(void *b, int c, size_t len);

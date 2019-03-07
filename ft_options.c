@@ -6,7 +6,7 @@
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/17 15:11:27 by cpireyre          #+#    #+#             */
-/*   Updated: 2019/03/05 16:19:10 by cpireyre         ###   ########.fr       */
+/*   Updated: 2019/03/07 12:05:02 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 unsigned long long		ft_options(int argc, char **argv)
 {
-	int		i;
+	int					i;
 	unsigned long long	bits;
-	char	*ptr;
+	char				*ptr;
 
 	bits = 0;
 	i = 1;

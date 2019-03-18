@@ -6,7 +6,7 @@
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/01 11:56:47 by cpireyre          #+#    #+#             */
-/*   Updated: 2019/03/05 16:24:25 by cpireyre         ###   ########.fr       */
+/*   Updated: 2019/03/18 17:01:55 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -144,6 +144,7 @@ void (*del)(void *, size_t));
 t_list					*ft_lstrev(t_list *head);
 int						ft_gnl(const int fd, char **line);
 void					ft_exit(const char *errmsg, int status);
-int						ft_printf(const char *format, ...);
+int						ft_printf(const char *format,\
+	...) __attribute__((format(printf,1,2)));
 
 #endif

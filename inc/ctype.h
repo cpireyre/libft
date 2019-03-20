@@ -6,7 +6,7 @@
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/20 10:06:55 by cpireyre          #+#    #+#             */
-/*   Updated: 2019/03/20 16:27:29 by cpireyre         ###   ########.fr       */
+/*   Updated: 2019/03/20 16:51:34 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include "fttypes.h"
 
 int			ft_toupper(int c) __attribute__((const));
-int	   		ft_tolower(int c) __attribute__((const));
+int			ft_tolower(int c) __attribute__((const));
 t_bool		ft_isupper(int c) __attribute__((const));
 t_bool		ft_isspace(char c) __attribute__((const));
 t_bool		ft_isprint(int c) __attribute__((const));

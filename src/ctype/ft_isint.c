@@ -6,7 +6,7 @@
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/05 16:31:18 by cpireyre          #+#    #+#             */
-/*   Updated: 2019/03/20 16:27:29 by cpireyre         ###   ########.fr       */
+/*   Updated: 2019/03/20 16:54:14 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 #include "ctype.h"
 #include <limits.h>
 #include "fttypes.h"
-
 
 t_bool		ft_isint(const char *arg)
 {

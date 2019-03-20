@@ -6,7 +6,7 @@
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/14 10:14:15 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/11/08 08:13:22 by cpireyre         ###   ########.fr       */
+/*   Updated: 2019/03/20 09:44:54 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,11 +80,11 @@ t_byte	get_length_mod(const char *spec)
 		else if (spec[i] == 'z')
 			length_mod = length_mod | (MOD_Z);
 		else if (spec[i] == 'h')
-			length_mod = (length_mod & (MOD_H)) ? \
-				(length_mod | (MOD_HH)) : (length_mod | (MOD_H));
+			length_mod = (length_mod & (MOD_H))
+				? (length_mod | (MOD_HH)) : (length_mod | (MOD_H));
 		else if (spec[i] == 'l')
-			length_mod = (length_mod & (MOD_L)) ? \
-				(length_mod | (MOD_LL)) : (length_mod | (MOD_L));
+			length_mod = (length_mod & (MOD_L))
+				? (length_mod | (MOD_LL)) : (length_mod | (MOD_L));
 		i++;
 	}
 	return (length_mod);

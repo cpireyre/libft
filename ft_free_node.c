@@ -6,7 +6,7 @@
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/05 14:32:22 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/12/05 14:32:23 by cpireyre         ###   ########.fr       */
+/*   Updated: 2019/03/19 14:35:06 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 
 void	ft_free_node(void *ptr, size_t size)
 {
-	ft_bzero(ptr, size);
+	(void)size;
 	ft_memdel(&ptr);
 }

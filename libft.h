@@ -111,7 +111,7 @@ int						ft_atoi_base(char *nbr, int base);
 intmax_t				ft_atoi(const char *nbr);
 char					*ft_itoa(int n);
 unsigned long long		ft_options(int argc, char **argv);
-void					*ft_memcpy(void *dst, const void *src, size_t n);
+void					*ft_memcpy(void *restrict dst, const void *restrict src, size_t n) __attribute__((hot));
 void					ft_memdel(void **ap);
 void					*ft_memset(void *b, int c, size_t len);
 void					*ft_memalloc(size_t size);

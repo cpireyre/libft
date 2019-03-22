@@ -1,10 +1,14 @@
 .DEFAULT_GOAL	:= all
-VPATH			:= src
 
 CC				:= gcc
 CFLAGS			:= -Wall -Wextra -Werror
 CFLAGS			+= -Wpedantic -std=c11
 CFLAGS			+= -Iinc -Iinc/ft_printf
+DEBUG			:= -g3 -fsanitize=address
+#CFLAGS			+= $(DEBUG)
+
+NAME			:= libft.a
+VPATH			:= src
 
 ctrl	:= ft_exit.c ft_isoption.c ft_options.c ft_swap.c ft_swap_int.c
 ctrl	:= $(addprefix ctrl/, $(ctrl))
@@ -45,7 +49,7 @@ str		+= ft_strnstr.c  ft_strrchr.c ft_strrealloc.c ft_strrev.c ft_strsplen.c
 str		+= ft_strsplit.c  ft_strstr.c ft_strsub.c ft_strtrim.c
 str		:= $(addprefix str/, $(str))
 
-ftprntf	:= buf.c buf_unicode.c cc.c conversions.c ddioo.c debug.c
+ftprntf	:= buf.c buf_unicode.c cc.c conversions.c ddioo.c 
 ftprntf	+= ft_printf.c get_int_data.c get_op.c integer_conversions.c
 ftprntf	+= print_int_conv.c ss.c uuxx.c
 ftprntf	:= $(addprefix ft_printf/, $(ftprntf))
@@ -54,6 +58,9 @@ objdir	:= obj
 ddir	:= dep
 src		:= $(ctrl) $(ctype) $(io) $(list) $(math) $(mem) $(str) $(ftprntf)
 obj		:= $(addprefix $(objdir)/, $(src:%.c=%.o))
+dep		:= $(addprefix $(ddir)/, $(src:%.c=%.d))
+
+-include $(dep)
 
 %/.f:
 	mkdir -p $(@D)
@@ -67,12 +74,20 @@ $(objdir)/%.o:	%.c $$(@D)/.f $$(subst $(objdir),$(ddir),$$(@D))/.f
 	$(CC) $(CFLAGS) -c $< -o $@ -MMD -MP -MF $(call dname,$(objdir),$(ddir),$@)
 
 .PHONY: all
-all: $(obj)
+all: $(obj) $(NAME)
+
+ARFLAGS	:=	Urcs
+.NOTPARALLEL: $(NAME)
+$(NAME): 	$$@($(obj))
 
 .PHONY: clean
 clean:
 	$(RM) -r $(objdir) $(ddir)
 
+.PHONY: fclean
+fclean: clean
+	$(RM) $(NAME)
+
 .PHONY: re
 .NOTPARALLEL: re
-re: clean all
+re: fclean all

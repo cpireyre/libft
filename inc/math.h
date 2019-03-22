@@ -28,7 +28,7 @@ int		ft_count_digits_base(intmax_t n, int base) __attribute__((const));
 int		ft_sqrt(int n) __attribute__((const));
 int		ft_abs(int n) __attribute__((const));
 
-int		ft_min(int a, int b) __attribute__((CONST_INLINE));
-int		ft_max(int a, int b) __attribute__((CONST_INLINE));
+int		ft_min(int a, int b) __attribute__((const));
+int		ft_max(int a, int b) __attribute__((const));
 
 #endif

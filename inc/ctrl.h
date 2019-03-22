@@ -17,8 +17,8 @@
 
 t_bool				ft_isoption(const char *arg) __attribute__((pure));
 void				ft_exit(const char *errmsg, int status);
-void				ft_swap_int(int *a, int *b) __attribute__((always_inline));
-void				ft_swap(char *a, char *b) __attribute__((always_inline));
+void				ft_swap_int(int *a, int *b);
+void				ft_swap(char *a, char *b);
 unsigned long long	ft_options(int argc, char **argv) __attribute__((pure));
 
 #endif

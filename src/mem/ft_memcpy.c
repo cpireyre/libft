@@ -14,8 +14,7 @@
 
 typedef	int64_t	__attribute__((__may_alias__))	i64;
 
-__attribute__((hot)) void	
-	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 {
 	t_byte 		*pdst;
 	t_byte 		*psrc;

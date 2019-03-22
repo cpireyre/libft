@@ -23,11 +23,11 @@ void	*ft_memchr(const void *s, int c, size_t n) __attribute__((pure));
 int		ft_memcmp(const void *a, const void *b, size_t n) __attribute__((pure));
 
 void	*ft_memccpy(void *d, const void *s, int c, size_t n);
-void	*ft_memcpy(void *dst, const void *src, size_t n);
-void	*ft_memmove(void *d, const void *s, size_t len);
+void	*ft_memcpy(void *dst, const void *src, size_t n) __attribute((nonnull));
+void	*ft_memmove(void *d, const void *s, size_t len) __attribute((nonnull));
 
-void	*ft_memset(void *b, int c, size_t len);
-void	ft_bzero(void *s, size_t n);
+void	*ft_memset(void *b, int c, size_t len) __attribute((nonnull));
+void	ft_bzero(void *s, size_t n) __attribute((nonnull));
 void	ft_memdel(void **ap);
 void	ft_free_node(void *ptr, size_t size);
 #endif

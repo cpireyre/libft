@@ -23,5 +23,6 @@
 # include "math.h"
 # include "mem.h"
 # include "str.h"
+# include "hash.h"
 
 #endif

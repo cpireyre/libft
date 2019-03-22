@@ -1,3 +1,6 @@
+SHELL			:= /bin/sh
+.SUFFIXES		:=
+.SUFFIXES		:= .c .o
 .DEFAULT_GOAL	:= all
 
 CC				:= gcc
@@ -6,8 +9,8 @@ CFLAGS			+= -Wpedantic -std=c11
 CFLAGS			+= -Iinc -Iinc/ft_printf
 DEBUG			:= -g3 -fsanitize=address
 #CFLAGS			+= $(DEBUG)
-
 NAME			:= libft.a
+
 VPATH			:= src
 
 ctrl	:= ft_exit.c ft_isoption.c ft_options.c ft_swap.c ft_swap_int.c
@@ -54,9 +57,13 @@ ftprntf	+= ft_printf.c get_int_data.c get_op.c integer_conversions.c
 ftprntf	+= print_int_conv.c ss.c uuxx.c
 ftprntf	:= $(addprefix ft_printf/, $(ftprntf))
 
+hash	:= ft_djb.c ft_jenkins.c create.c end.c
+hash	:= $(addprefix hash/, $(hash))
+
 objdir	:= obj
 ddir	:= dep
-src		:= $(ctrl) $(ctype) $(io) $(list) $(math) $(mem) $(str) $(ftprntf)
+src		:= $(ctrl) $(ctype) $(io) $(list) $(math) $(mem) $(str)
+src		+= $(ftprntf) $(hash)
 obj		:= $(addprefix $(objdir)/, $(src:%.c=%.o))
 dep		:= $(addprefix $(ddir)/, $(src:%.c=%.d))
 
@@ -68,13 +75,14 @@ dep		:= $(addprefix $(ddir)/, $(src:%.c=%.d))
 
 .PRECIOUS: %/.f
 .SECONDEXPANSION:
+.PRECIOUS: $(obj)
 
 dname = $(subst $(1),$(2),$(basename $(3))).d
 $(objdir)/%.o:	%.c $$(@D)/.f $$(subst $(objdir),$(ddir),$$(@D))/.f
 	$(CC) $(CFLAGS) -c $< -o $@ -MMD -MP -MF $(call dname,$(objdir),$(ddir),$@)
 
 .PHONY: all
-all: $(obj) $(NAME)
+all: $(NAME)
 
 ARFLAGS	:=	Urcs
 .NOTPARALLEL: $(NAME)

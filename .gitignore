@@ -3,6 +3,8 @@
 *.ko
 *.obj
 *.elf
+/obj
+/dep
 
 # Linker output
 *.ilk
@@ -48,4 +50,3 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.confe.o
-*.a

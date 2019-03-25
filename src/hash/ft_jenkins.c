@@ -7,16 +7,17 @@
 **	fine for my purposes.
 */
 
-uint32_t	ft_jenkins(const char *key, size_t length)
+uint32_t	ft_jenkins(const char *key)
 {
 	uint32_t	hash;
 
 	hash = 0;
-	while (length--)
+	while (*key)
 	{
-		hash += key[length];
+		hash += *key;
 		hash += hash << 10;
 		hash ^= hash >> 6;
+		key++;
 	}
 	hash += hash << 3;
 	hash ^= hash >> 11;

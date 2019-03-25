@@ -15,21 +15,26 @@
 
 void			flush_buf(t_buf *buf)
 {
-	if (buf->pos)
+	if (buf->written)
 	{
-		write(buf->filedesc, buf->tab, buf->pos);
-		buf->pos = 0;
+		write(buf->filedesc, buf->tab, buf->written);
+		buf->written = 0;
 	}
 }
 
 void			putc_buf(t_buf *buf, char c)
 {
-	buf->tab[buf->pos] = c;
-	buf->pos++;
+	buf->tab[buf->written] = c;
 	buf->written++;
-	if (buf->pos == BUFF_SIZE)
+	if (buf->written == BUFF_SIZE)
 		flush_buf(buf);
 }
+
+/*
+**	TODO
+**	use memcpy instead
+**	probably makes the below function obsolete, too
+*/
 
 void			putstr_buf(t_buf *buf, char *str)
 {
@@ -39,6 +44,11 @@ void			putstr_buf(t_buf *buf, char *str)
 		str++;
 	}
 }
+
+/*
+**	TODO
+**	use memcpy instead
+*/
 
 void			putnstr_buf(t_buf *buf, char *str, int n)
 {
@@ -51,6 +61,11 @@ void			putnstr_buf(t_buf *buf, char *str, int n)
 		i++;
 	}
 }
+
+/*
+**	TODO:
+**	use memset instead
+*/
 
 void			repeat_buf(t_buf *buf, char c, int num)
 {

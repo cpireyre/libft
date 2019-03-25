@@ -24,10 +24,9 @@
 
 typedef struct		s_buf
 {
-	char	tab[BUFF_SIZE];
-	size_t	pos;
+	size_t	written;
 	int		filedesc;
-	int		written;
+	char	tab[BUFF_SIZE];
 }					t_buf;
 
 void				flush_buf(t_buf *buf);

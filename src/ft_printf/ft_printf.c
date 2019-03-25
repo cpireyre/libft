@@ -17,7 +17,6 @@
 static void			init_printf(t_printf *data, va_list *ap)
 {
 	data->ap = ap;
-	data->buf.pos = 0;
 	data->buf.filedesc = 1;
 	data->buf.written = 0;
 	data->error = false;
@@ -60,7 +59,7 @@ int					convert(t_printf *data, const char *format)
 	return (j);
 }
 
-extern int			ft_printf(const char *format, ...)
+int			ft_printf(const char *format, ...)
 {
 	t_printf	data;
 	va_list		ap;
@@ -78,5 +77,5 @@ extern int			ft_printf(const char *format, ...)
 		i++;
 	}
 	flush_buf(&data.buf);
-	return (data.error == true ? -1 : data.buf.written);
+	return (data.error == true ? -1 : (int)data.buf.written);
 }

@@ -15,18 +15,19 @@
 
 void			flush_buf(t_buf *buf)
 {
-	if (buf->written)
+	if (buf->pos)
 	{
-		write(buf->filedesc, buf->tab, buf->written);
-		buf->written = 0;
+		write(buf->filedesc, buf->tab, buf->pos);
+		buf->pos = 0;
 	}
 }
 
 void			putc_buf(t_buf *buf, char c)
 {
-	buf->tab[buf->written] = c;
+	buf->tab[buf->pos] = c;
+	buf->pos++;
 	buf->written++;
-	if (buf->written == BUFSIZ)
+	if (buf->pos == BUFSIZ)
 		flush_buf(buf);
 }
 

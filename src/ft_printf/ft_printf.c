@@ -19,6 +19,7 @@ static void			init_printf(t_printf *data, va_list *ap)
 	data->ap = ap;
 	data->buf.filedesc = 1;
 	data->buf.written = 0;
+	data->buf.pos = 0;
 	data->error = false;
 	g_conversions[0] = (t_conv){'d', &signed_dec};
 	g_conversions[1] = (t_conv){'i', &signed_dec};

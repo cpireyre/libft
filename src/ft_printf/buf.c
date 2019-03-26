@@ -13,6 +13,7 @@
 #include "buf.h"
 #include "mem.h"
 #include "str.h"
+#include "math.h"
 #include <unistd.h>
 
 void			flush_buf(t_buf *buf)
@@ -53,6 +54,7 @@ void			putnstr_buf(t_buf *buf, char *str, int n)
 {
 	int	copied;
 
+	n = ft_min(n, ft_strlen(str));
 	copied = BUFSIZ - buf->pos;
 	if (buf->pos + n < BUFSIZ)
 	{

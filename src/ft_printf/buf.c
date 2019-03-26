@@ -11,6 +11,9 @@
 /* ************************************************************************** */
 
 #include "buf.h"
+#include "mem.h"
+#include "str.h"
+#include "math.h"
 #include <unistd.h>
 
 void			flush_buf(t_buf *buf)
@@ -26,7 +29,7 @@ void			putc_buf(t_buf *buf, char c)
 {
 	buf->tab[buf->pos] = c;
 	buf->pos++;
-	buf->written++;
+	buf->written_total++;
 	if (buf->pos == BUFSIZ)
 		flush_buf(buf);
 }
@@ -39,11 +42,7 @@ void			putc_buf(t_buf *buf, char c)
 
 void			putstr_buf(t_buf *buf, char *str)
 {
-	while (*str)
-	{
-		putc_buf(buf, *str);
-		str++;
-	}
+	putnstr_buf(buf, str, ft_strlen(str));
 }
 
 /*
@@ -53,26 +52,43 @@ void			putstr_buf(t_buf *buf, char *str)
 
 void			putnstr_buf(t_buf *buf, char *str, int n)
 {
-	int	i;
+	int	copied;
 
-	i = 0;
-	while (str[i] && i < n)
+	n = ft_min(n, ft_strlen(str));
+	copied = BUFSIZ - buf->pos;
+	if (buf->pos + n < BUFSIZ)
 	{
-		putc_buf(buf, str[i]);
-		i++;
+		ft_memcpy(buf->tab + buf->pos, str, sizeof(char) * n);
+		buf->pos += n;
+		buf->written_total += n;
+	}
+	else
+	{
+		ft_memcpy(buf->tab + buf->pos, str, sizeof(char) * (copied));
+		buf->pos += copied;
+		buf->written_total += copied;
+		flush_buf(buf);
+		putnstr_buf(buf, str + copied, n - (copied));
 	}
 }
 
-/*
-**	TODO:
-**	use memset instead
-*/
-
 void			repeat_buf(t_buf *buf, char c, int num)
 {
-	while (num)
+	int		copied;
+
+	copied = BUFSIZ - buf->pos;
+	if (buf->pos + num < BUFSIZ)
 	{
-		putc_buf(buf, c);
-		num--;
+		ft_memset(buf->tab + buf->pos, c, sizeof(char) * num);
+		buf->pos += num;
+		buf->written_total += num;
+	}
+	else
+	{
+		ft_memset(buf->tab + buf->pos, c, sizeof(char) * (copied));
+		buf->pos += copied;
+		buf->written_total += copied;
+		flush_buf(buf);
+		repeat_buf(buf, c, num - (copied));
 	}
 }

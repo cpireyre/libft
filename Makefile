@@ -5,7 +5,7 @@ SHELL			:= /bin/sh
 
 CC				:= gcc
 CFLAGS			:= -Wall -Wextra -Werror
-CFLAGS			+= -Wpedantic -std=c11 -fPIC
+CFLAGS			+= -Wpedantic -std=c11
 CFLAGS			+= -Iinc -Iinc/ft_printf
 DEBUG			:= -g3 -fsanitize=address
 #CFLAGS			+= $(DEBUG)

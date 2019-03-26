@@ -18,7 +18,7 @@ static void			init_printf(t_printf *data, va_list *ap)
 {
 	data->ap = ap;
 	data->buf.filedesc = 1;
-	data->buf.written = 0;
+	data->buf.written_total = 0;
 	data->buf.pos = 0;
 	data->error = false;
 	g_conversions[0] = (t_conv){'d', &signed_dec};
@@ -78,5 +78,5 @@ int			ft_printf(const char *format, ...)
 		i++;
 	}
 	flush_buf(&data.buf);
-	return (data.error == true ? -1 : (int)data.buf.written);
+	return (data.error == true ? -1 : (int)data.buf.written_total);
 }

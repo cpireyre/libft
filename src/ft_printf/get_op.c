@@ -22,14 +22,14 @@ t_byte	get_fl(const char *spec)
 
 	i = -1;
 	fl = 0;
-	ignore_zero = 0;
+	ignore_zero = false;
 	while (spec[++i] && !ft_strchr(CONVERSIONS, spec[i]))
 	{
-		if ('1' <= spec[i] && spec[i] <= 9)
+		if ('1' <= spec[i] && spec[i] <= '9')
 			ignore_zero = true;
 		if (spec[i] == '#')
 			fl = fl | (FLAG_SHARP);
-		else if (spec[i] == '0' && !ignore_zero)
+		else if (spec[i] == '0' && ignore_zero == false)
 			fl = fl | (FLAG_ZERO);
 		else if (spec[i] == '-')
 			fl = fl | (FLAG_DASH);

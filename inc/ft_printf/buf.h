@@ -23,7 +23,8 @@
 
 typedef struct		s_buf
 {
-	size_t	written;
+	size_t	written_total;
+	size_t	pos;
 	int		filedesc;
 	char	tab[BUFSIZ];
 }					t_buf;

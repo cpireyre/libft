@@ -6,7 +6,7 @@ SHELL			:= /bin/sh
 CC				:= gcc
 CFLAGS			:= -Wall -Wextra -Werror
 CFLAGS			+= -Wpedantic -std=c11
-CFLAGS			+= -Iinc -Iinc/ft_printf
+CFLAGS			+= -Iinc -Iinc/ft_printf -fPIC
 DEBUG			:= -g3 -fsanitize=address
 #CFLAGS			+= $(DEBUG)
 NAME			:= libft.a

@@ -26,7 +26,7 @@ void			putc_buf(t_buf *buf, char c)
 {
 	buf->tab[buf->written] = c;
 	buf->written++;
-	if (buf->written == BUFF_SIZE)
+	if (buf->written == BUFSIZ)
 		flush_buf(buf);
 }
 

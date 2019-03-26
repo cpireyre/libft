@@ -19,14 +19,13 @@
 */
 
 # include <wchar.h>
-
-# define BUFF_SIZE		4096
+# include <stdio.h>
 
 typedef struct		s_buf
 {
 	size_t	written;
 	int		filedesc;
-	char	tab[BUFF_SIZE];
+	char	tab[BUFSIZ];
 }					t_buf;
 
 void				flush_buf(t_buf *buf);

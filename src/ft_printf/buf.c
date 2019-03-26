@@ -21,6 +21,7 @@ void			flush_buf(t_buf *buf)
 	if (buf->pos)
 	{
 		write(buf->filedesc, buf->tab, buf->pos);
+		buf->written_total += buf->pos;
 		buf->pos = 0;
 	}
 }
@@ -29,7 +30,6 @@ void			putc_buf(t_buf *buf, char c)
 {
 	buf->tab[buf->pos] = c;
 	buf->pos++;
-	buf->written_total++;
 	if (buf->pos == BUFSIZ)
 		flush_buf(buf);
 }
@@ -49,13 +49,11 @@ void			putnstr_buf(t_buf *buf, char *str, int n)
 	{
 		ft_memcpy(buf->tab + buf->pos, str, sizeof(char) * n);
 		buf->pos += n;
-		buf->written_total += n;
 	}
 	else
 	{
 		ft_memcpy(buf->tab + buf->pos, str, sizeof(char) * (copied));
 		buf->pos += copied;
-		buf->written_total += copied;
 		flush_buf(buf);
 		putnstr_buf(buf, str + copied, n - (copied));
 	}
@@ -70,13 +68,11 @@ void			repeat_buf(t_buf *buf, char c, int num)
 	{
 		ft_memset(buf->tab + buf->pos, c, sizeof(char) * num);
 		buf->pos += num;
-		buf->written_total += num;
 	}
 	else
 	{
 		ft_memset(buf->tab + buf->pos, c, sizeof(char) * (copied));
 		buf->pos += copied;
-		buf->written_total += copied;
 		flush_buf(buf);
 		repeat_buf(buf, c, num - (copied));
 	}

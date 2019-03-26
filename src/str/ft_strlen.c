@@ -10,19 +10,35 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdint.h>
 #include <stddef.h>
 
-size_t	ft_strlen(const char *s)
-{
-	size_t i;
+#define ONES ((size_t)-1 / 255)
+#define HIGHS (ONES * ((255 >> 2) + 1))
 
-	i = 0;
-	if (s[i])
-	{
-		while (s[i])
-		{
-			i++;
-		}
-	}
-	return (i);
+__attribute__((always_inline))
+static inline int	haszero(size_t w)
+{
+	if ((w - ONES) & ~(w) & HIGHS)
+		return (1);
+	else
+		return (0);
+}
+
+size_t	ft_strlen(const char *restrict s)
+{
+	const size_t	*ptr;
+	const char		*save;
+
+	save = s;
+	while ((uintptr_t)(s) % sizeof(size_t))
+		if (!*s)
+			return (s - save);
+	ptr = (const void*)(s);
+	while (!(haszero(*ptr)))
+		ptr++;
+	s = (const char *)ptr;
+	while (*s)
+		s++;
+	return (s - save);
 }

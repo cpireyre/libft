@@ -34,21 +34,10 @@ void			putc_buf(t_buf *buf, char c)
 		flush_buf(buf);
 }
 
-/*
-**	TODO
-**	use memcpy instead
-**	probably makes the below function obsolete, too
-*/
-
 void			putstr_buf(t_buf *buf, char *str)
 {
 	putnstr_buf(buf, str, ft_strlen(str));
 }
-
-/*
-**	TODO
-**	use memcpy instead
-*/
 
 void			putnstr_buf(t_buf *buf, char *str, int n)
 {

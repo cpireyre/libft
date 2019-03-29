@@ -6,10 +6,11 @@
 /*   By: cpireyre <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/08 08:48:00 by cpireyre          #+#    #+#             */
-/*   Updated: 2019/03/20 16:34:13 by cpireyre         ###   ########.fr       */
+/*   Updated: 2019/03/29 13:01:39 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "list.h"
 #include "mem.h"
 
@@ -27,7 +28,7 @@ t_list		*ft_lstnew(void const *content, size_t content_size)
 	}
 	else
 	{
-		if (!(new->content = ft_memalloc(content_size)))
+		if (!(new->content = malloc(content_size)))
 			return (NULL);
 		ft_memcpy(new->content, content, content_size);
 		new->content_size = content_size;

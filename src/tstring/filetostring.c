@@ -6,7 +6,7 @@
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/29 15:48:15 by cpireyre          #+#    #+#             */
-/*   Updated: 2019/03/29 16:01:56 by cpireyre         ###   ########.fr       */
+/*   Updated: 2019/03/29 16:04:45 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static ssize_t	copy_array(char **old_ptr, ssize_t curr, ssize_t data_amount)
 	if (!new_ptr)
 	{
 		ft_strdel(old_ptr);
-		return (-1);
+		return (MALLOC_ERR);
 	}
 	ft_memcpy(new_ptr, *old_ptr, sizeof(char) * data_amount);
 	ft_strdel(old_ptr);
@@ -55,7 +55,7 @@ static int		fill_buffer(int fd, t_str *buf)
 		if (space - buf->length < BUFSIZ)
 		{
 			space = copy_array(&buf->str, space, buf->length);
-			if (space == -1)
+			if (space == MALLOC_ERR)
 				return (MALLOC_ERR);
 		}
 	}

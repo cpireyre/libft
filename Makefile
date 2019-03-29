@@ -100,7 +100,7 @@ $(objdir)/%.o:	%.c $$(@D)/.f $$(subst $(objdir),$(ddir),$$(@D))/.f
 .PHONY: all
 all: $(NAME)
 
-ARFLAGS	:=	Urcs
+ARFLAGS	:=	urcs
 .NOTPARALLEL: $(NAME)
 $(NAME): 	$$@($(obj))
 

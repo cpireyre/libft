@@ -1,38 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_jenkins.c                                       :+:      :+:    :+:   */
+/*   destroy.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/29 13:06:06 by cpireyre          #+#    #+#             */
-/*   Updated: 2019/03/29 13:06:07 by cpireyre         ###   ########.fr       */
+/*   Created: 2019/03/29 13:05:58 by cpireyre          #+#    #+#             */
+/*   Updated: 2019/03/29 13:05:59 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdint.h>
-#include <stddef.h>
+#include "hash.h"
 
-/*
-**	This is Bob Jenkins's one-at-a-time hash function.
-**	It's better than djb but they're both
-**	fine for my purposes.
-*/
-
-uint32_t	ft_jenkins(const char *key)
+void	hashtable_destroy(t_ht *ht)
 {
-	uint32_t	hash;
+	size_t	idx;
 
-	hash = 0;
-	while (*key)
-	{
-		hash += *key;
-		hash += hash << 10;
-		hash ^= hash >> 6;
-		key++;
-	}
-	hash += hash << 3;
-	hash ^= hash >> 11;
-	hash += hash << 15;
-	return (hash);
+	idx = 0;
+	while (idx < ht->cap)
+		if (ht->buckets[idx++])
+			ft_lstdel(&ht->buckets[idx], &ft_free_node);
 }

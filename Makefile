@@ -66,7 +66,7 @@ ftprntf	+= print_int_conv.c ss.c uuxx.c
 ftprntf	:= $(addprefix $(ftprntfdir)/, $(ftprntf))
 
 hashdir	:= hash
-hash	:= ft_djb.c ft_jenkins.c
+hash	:= ft_djb.c ft_jenkins.c init.c addelem.c
 hash	:= $(addprefix $(hashdir)/, $(hash))
 
 objdir	:= obj

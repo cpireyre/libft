@@ -1,38 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_jenkins.c                                       :+:      :+:    :+:   */
+/*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/29 13:06:06 by cpireyre          #+#    #+#             */
-/*   Updated: 2019/03/29 13:06:07 by cpireyre         ###   ########.fr       */
+/*   Created: 2019/03/29 13:05:01 by cpireyre          #+#    #+#             */
+/*   Updated: 2019/03/29 13:05:32 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdint.h>
-#include <stddef.h>
+#include "hash.h"
+#include "mem.h"
 
-/*
-**	This is Bob Jenkins's one-at-a-time hash function.
-**	It's better than djb but they're both
-**	fine for my purposes.
-*/
-
-uint32_t	ft_jenkins(const char *key)
+int		hashtable_init(t_ht *ht, size_t initial_cap)
 {
-	uint32_t	hash;
-
-	hash = 0;
-	while (*key)
+	ht->buckets = ft_memalloc(sizeof(t_list*) * initial_cap);
+	if (!ht->buckets)
+		return (MALLOC_ERR);
+	else
 	{
-		hash += *key;
-		hash += hash << 10;
-		hash ^= hash >> 6;
-		key++;
+		ht->cap = initial_cap;
+		ht->elems = 0;
+		return (SUCCESS);
 	}
-	hash += hash << 3;
-	hash ^= hash >> 11;
-	hash += hash << 15;
-	return (hash);
 }

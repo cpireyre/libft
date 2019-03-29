@@ -6,13 +6,20 @@
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/11 11:48:29 by cpireyre          #+#    #+#             */
-/*   Updated: 2018/12/11 15:21:44 by cpireyre         ###   ########.fr       */
+/*   Updated: 2019/03/29 12:37:33 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include "conversions.h"
 #include "str.h"
+
+/*
+**	wchar.h doesn't compile anymore...?
+**	disabling unicode support for now.
+**	g_conversions[12] = (t_conv){'S', &mb_string};
+**	g_conversions[11] = (t_conv){'C', &mb_char};
+*/
 
 static void			init_printf(t_printf *data, va_list *ap)
 {
@@ -32,8 +39,8 @@ static void			init_printf(t_printf *data, va_list *ap)
 	g_conversions[8] = (t_conv){'O', &l_u_octal};
 	g_conversions[9] = (t_conv){'U', &l_u_dec};
 	g_conversions[10] = (t_conv){'s', &string};
-	g_conversions[11] = (t_conv){'C', &mb_char};
-	g_conversions[12] = (t_conv){'S', &mb_string};
+	g_conversions[11] = (t_conv){'C', &unichar};
+	g_conversions[12] = (t_conv){'S', &string};
 	g_conversions[13] = (t_conv){'p', &ptr_addr};
 }
 

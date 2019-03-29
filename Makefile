@@ -60,7 +60,7 @@ str		+= ft_strsplit.c  ft_strstr.c ft_strsub.c ft_strtrim.c
 str		:= $(addprefix $(strdir)/, $(str))
 
 ftprntfdir := ft_printf
-ftprntf	:= buf.c buf_unicode.c cc.c conversions.c ddioo.c 
+ftprntf	:= buf.c cc.c conversions.c ddioo.c # buf_unicode.c
 ftprntf	+= ft_printf.c get_int_data.c get_op.c integer_conversions.c
 ftprntf	+= print_int_conv.c ss.c uuxx.c
 ftprntf	:= $(addprefix $(ftprntfdir)/, $(ftprntf))

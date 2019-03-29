@@ -6,7 +6,7 @@
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/20 16:47:49 by cpireyre          #+#    #+#             */
-/*   Updated: 2019/03/29 16:00:37 by cpireyre         ###   ########.fr       */
+/*   Updated: 2019/03/29 16:02:54 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include "fttypes.h"
 # include "attributes.h"
 
+# include "errcodes.h"
 # include "ctrl.h"
 # include "ctype.h"
 # include "io.h"

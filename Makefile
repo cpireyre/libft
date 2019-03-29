@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/03/29 15:48:19 by cpireyre          #+#    #+#              #
+#    Updated: 2019/03/29 15:49:10 by cpireyre         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 SHELL			:= /bin/sh
 .SUFFIXES		:=
 .SUFFIXES		:= .c .o
@@ -65,6 +77,10 @@ ftprntf	+= ft_printf.c get_int_data.c get_op.c integer_conversions.c
 ftprntf	+= print_int_conv.c ss.c uuxx.c
 ftprntf	:= $(addprefix $(ftprntfdir)/, $(ftprntf))
 
+tstringdir := tstring
+tstring := filetostring.c print.c
+tstring	:= $(addprefix $(tstringdir)/, $(tstring))
+
 hashdir	:= hash
 hash	:= ft_djb.c ft_jenkins.c init.c addelem.c
 hash	:= $(addprefix $(hashdir)/, $(hash))
@@ -72,7 +88,7 @@ hash	:= $(addprefix $(hashdir)/, $(hash))
 objdir	:= obj
 ddir	:= dep
 src		:= $(ctrl) $(ctype) $(io) $(list) $(math) $(mem) $(str)
-src		+= $(ftprntf) $(hash)
+src		+= $(ftprntf) $(tstring) $(hash)
 obj		:= $(addprefix $(objdir)/, $(src:%.c=%.o))
 dep		:= $(addprefix $(ddir)/, $(src:%.c=%.d))
 

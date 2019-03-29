@@ -6,7 +6,7 @@
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/29 15:43:28 by cpireyre          #+#    #+#             */
-/*   Updated: 2019/03/29 15:50:02 by cpireyre         ###   ########.fr       */
+/*   Updated: 2019/03/29 16:01:25 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,6 @@
 # define TSTRING_H
 
 # include <stddef.h>
-
-# define SUCCESS	0
-# define MALLOC_ERR	1
-# define READ_ERR	-1
 
 typedef struct	s_str
 {

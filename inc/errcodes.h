@@ -1,28 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   init.c                                             :+:      :+:    :+:   */
+/*   errcodes.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/29 13:05:01 by cpireyre          #+#    #+#             */
-/*   Updated: 2019/03/29 16:01:39 by cpireyre         ###   ########.fr       */
+/*   Created: 2019/03/29 16:00:21 by cpireyre          #+#    #+#             */
+/*   Updated: 2019/03/29 16:00:37 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "hash.h"
-#include "mem.h"
-#include "errcodes.h"
+#ifndef ERRCODES_H
+# define ERRCODES_H
 
-int		hashtable_init(t_ht *ht, size_t initial_cap)
-{
-	ht->buckets = ft_memalloc(sizeof(t_list*) * initial_cap);
-	if (!ht->buckets)
-		return (MALLOC_ERR);
-	else
-	{
-		ht->cap = initial_cap;
-		ht->elems = 0;
-		return (SUCCESS);
-	}
-}
+# define SUCCESS	0x0
+# define MALLOC_ERR	0xDEADBABE
+# define READ_ERR	-1
+
+#endif

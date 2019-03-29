@@ -6,7 +6,7 @@
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/29 13:04:53 by cpireyre          #+#    #+#             */
-/*   Updated: 2019/03/29 13:04:54 by cpireyre         ###   ########.fr       */
+/*   Updated: 2019/03/29 15:59:15 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,7 @@
 # include "fttypes.h"
 # include "list.h"
 
-# define DUPE			2
-# define MALLOC_ERR		1
-# define SUCCESS		0
+# define DUPE	0xFEDB4
 
 typedef struct	s_ht
 {

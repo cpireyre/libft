@@ -6,12 +6,13 @@
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/29 13:04:52 by cpireyre          #+#    #+#             */
-/*   Updated: 2019/03/29 13:04:54 by cpireyre         ###   ########.fr       */
+/*   Updated: 2019/03/29 16:02:06 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "hash.h"
 #include "str.h"
+#include "errcodes.h"
 
 int		hashtable_addelem(t_ht *ht, const char *key, size_t len)
 {

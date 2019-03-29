@@ -6,13 +6,14 @@
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/29 15:48:15 by cpireyre          #+#    #+#             */
-/*   Updated: 2019/03/29 15:50:35 by cpireyre         ###   ########.fr       */
+/*   Updated: 2019/03/29 16:01:56 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "tstring.h"
 #include "mem.h"
 #include "str.h"
+#include "errcodes.h"
 #include <stdlib.h>
 #include <stdio.h>
 #include <unistd.h>

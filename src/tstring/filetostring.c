@@ -6,7 +6,7 @@
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/29 15:48:15 by cpireyre          #+#    #+#             */
-/*   Updated: 2019/03/29 16:04:45 by cpireyre         ###   ########.fr       */
+/*   Updated: 2019/04/02 14:01:47 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,11 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <unistd.h>
+
+/*
+**	new_size can never equal MALLOC_ERR since
+**	one is even and the other is odd
+*/
 
 static ssize_t	copy_array(char **old_ptr, ssize_t curr, ssize_t data_amount)
 {

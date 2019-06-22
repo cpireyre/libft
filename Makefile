@@ -6,7 +6,7 @@
 #    By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/29 15:48:19 by cpireyre          #+#    #+#              #
-#    Updated: 2019/03/29 15:49:10 by cpireyre         ###   ########.fr        #
+#    Updated: 2019/06/21 12:27:11 by cpireyre         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,7 @@ ctrl	:= $(addprefix $(ctrldir)/, $(ctrl))
 ctypedir := ctype
 ctype	:= ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isblank.c ft_isdash.c 
 ctype	+= ft_isdigit.c ft_isint.c ft_islower.c ft_isprint.c ft_isspace.c 
-ctype	+= ft_isupper.c ft_tolower.c ft_toupper.c
+ctype	+= ft_isupper.c ft_tolower.c ft_toupper.c ft_isint.c
 ctype	:= $(addprefix $(ctypedir)/, $(ctype))
 
 iodir	:= io

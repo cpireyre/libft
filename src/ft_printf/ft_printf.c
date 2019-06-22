@@ -6,7 +6,7 @@
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/11 11:48:29 by cpireyre          #+#    #+#             */
-/*   Updated: 2019/03/29 12:37:33 by cpireyre         ###   ########.fr       */
+/*   Updated: 2019/06/22 17:10:25 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 **	g_conversions[11] = (t_conv){'C', &mb_char};
 */
 
-static void			init_printf(t_printf *data, va_list *ap)
+static void	init_printf(t_printf *data, va_list *ap)
 {
 	data->ap = ap;
 	data->buf.filedesc = 1;
@@ -44,7 +44,7 @@ static void			init_printf(t_printf *data, va_list *ap)
 	g_conversions[13] = (t_conv){'p', &ptr_addr};
 }
 
-int					convert(t_printf *data, const char *format)
+int			convert(t_printf *data, const char *format)
 {
 	size_t	j;
 	void	(*conv)(t_printf *);

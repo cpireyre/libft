@@ -6,7 +6,7 @@
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/29 15:48:15 by cpireyre          #+#    #+#             */
-/*   Updated: 2019/04/02 14:13:47 by cpireyre         ###   ########.fr       */
+/*   Updated: 2019/06/22 17:07:52 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static int	copy_array(char **old_ptr, ssize_t *curr, ssize_t data_amount)
 	return (SUCCESS);
 }
 
-static int		fill_buffer(int fd, t_str *buf)
+static int	fill_buffer(int fd, t_str *buf)
 {
 	ssize_t	bytes_read;
 	ssize_t	space;
@@ -62,7 +62,7 @@ static int		fill_buffer(int fd, t_str *buf)
 	}
 }
 
-int		file_to_string(int fd, t_str *buf)
+int			file_to_string(int fd, t_str *buf)
 {
 	buf->str = malloc(sizeof(char) * BUFSIZ);
 	if (!buf->str)

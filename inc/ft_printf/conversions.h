@@ -6,7 +6,7 @@
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/09 11:27:21 by cpireyre          #+#    #+#             */
-/*   Updated: 2019/03/29 12:37:16 by cpireyre         ###   ########.fr       */
+/*   Updated: 2019/06/22 17:11:09 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define CONVERSIONS_H
 
 # include "ft_printf.h"
-/* # include <wchar.h> */
 
 typedef	struct	s_conv
 {

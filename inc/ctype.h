@@ -6,7 +6,7 @@
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/20 10:06:55 by cpireyre          #+#    #+#             */
-/*   Updated: 2019/03/20 16:51:34 by cpireyre         ###   ########.fr       */
+/*   Updated: 2019/06/21 12:26:57 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,6 @@ t_bool		ft_isdash(char to_check) __attribute__((const));
 t_bool		ft_isblank(int c) __attribute__((const));
 t_bool		ft_isalpha(int c) __attribute__((const));
 t_bool		ft_isalnum(int c) __attribute__((const));
+t_bool		ft_isint(const char *arg) __attribute__((const));
 
 #endif

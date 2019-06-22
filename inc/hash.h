@@ -6,7 +6,7 @@
 /*   By: cpireyre <cpireyre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/29 13:04:53 by cpireyre          #+#    #+#             */
-/*   Updated: 2019/03/29 15:59:15 by cpireyre         ###   ########.fr       */
+/*   Updated: 2019/06/22 17:12:01 by cpireyre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,10 @@ typedef struct	s_ht
 	t_list	**buckets;
 }				t_ht;
 
-int			hashtable_init(t_ht *ht, size_t	initial_cap);
-int			hashtable_addelem(t_ht *ht, const char *key, size_t len);
-void		hashtable_destroy(t_ht *ht);
-size_t		ft_djb(const char *str) __attribute__((pure));
-uint32_t	ft_jenkins(const char *key) __attribute__((pure));
+int				hashtable_init(t_ht *ht, size_t	initial_cap);
+int				hashtable_addelem(t_ht *ht, const char *key, size_t len);
+void			hashtable_destroy(t_ht *ht);
+size_t			ft_djb(const char *str) __attribute__((pure));
+uint32_t		ft_jenkins(const char *key) __attribute__((pure));
 
-# endif
+#endif
